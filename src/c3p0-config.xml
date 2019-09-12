@@ -17,7 +17,7 @@
    <!--配置连接池mysql-->
     <named-config name="mysql">  
         <property name="driverClass">com.mysql.jdbc.Driver</property>
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/fxhtest?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8</property>
+        <property name="jdbcUrl">jdbc:mysql://47.100.199.240:3306/fxhtest?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8</property>
         <property name="user">root</property>  
         <property name="password"></property>
         <property name="initialPoolSize">10</property>  
