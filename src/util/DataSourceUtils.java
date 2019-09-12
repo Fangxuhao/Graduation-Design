@@ -14,7 +14,7 @@ import java.sql.Statement;
  * @description： date source工具类
  * @version: 1.0$
  */
-public class DateSourceUtils {
+public class DataSourceUtils {
     private  static ComboPooledDataSource dataSource=new ComboPooledDataSource("mysql");
 
     /**
