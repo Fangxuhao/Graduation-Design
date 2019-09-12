@@ -8,14 +8,13 @@ public class Images {
     private String id;
     private String src;
     private String describe;
-    private String uploadtime;
     private String a;
 
-    public Images(String id, String src, String describe, String uploadtime, String a) {
+    public Images(String id, String src, String describe , String a) {
         this.id = id;
         this.src = src;
         this.describe = describe;
-        this.uploadtime = uploadtime;
+
         this.a = a;
     }
 
@@ -47,14 +46,6 @@ public class Images {
         this.describe = describe;
     }
 
-    public String getUploadtime() {
-        return uploadtime;
-    }
-
-    public void String(String uploadtime) {
-        this.uploadtime = uploadtime;
-    }
-
     public String getA() {
         return a;
     }
@@ -69,7 +60,6 @@ public class Images {
                 "id='" + id + '\'' +
                 ", src='" + src + '\'' +
                 ", describe='" + describe + '\'' +
-                ", uploadtime=" + uploadtime +
                 ", a='" + a + '\'' +
                 '}';
     }
