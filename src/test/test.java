@@ -1,10 +1,11 @@
 package test;
 
+import DAO.impl.AdminDAOImpl;
 import domain.Images;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.junit.Test;
 import util.DataSourceUtils;
-
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
@@ -25,12 +26,11 @@ public class test {
 
         return queryRunner.query(sql, new BeanHandler<>(Images.class), id);
     }
-
-
-    public void test1(){
-
-
-        System.out.println();
+@Test
+    public void test1() throws SQLException {
+        long i=new AdminDAOImpl().Register("尼古拉斯","1","1");
+        System.out.println(i);
     }
+
 
 }

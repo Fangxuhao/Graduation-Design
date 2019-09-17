@@ -14,6 +14,30 @@ public class Article {
     String times;
     String type;
     String imgSrc;
+    private String liked;
+
+    public String getLiked() {
+        return liked;
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", content='" + content + '\'' +
+                ", date='" + date + '\'' +
+                ", times='" + times + '\'' +
+                ", type='" + type + '\'' +
+                ", imgSrc='" + imgSrc + '\'' +
+                ", liked='" + liked + '\'' +
+                '}';
+    }
+
+    public void setLiked(String liked) {
+        this.liked = liked;
+    }
 
     public Article() {
     }
@@ -82,17 +106,4 @@ public class Article {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Article{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", content='" + content + '\'' +
-                ", date='" + date + '\'' +
-                ", times='" + times + '\'' +
-                ", type='" + type + '\'' +
-                ", imgSrc='" + imgSrc + '\'' +
-                '}';
-    }
 }

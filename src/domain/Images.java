@@ -8,18 +8,17 @@ public class Images {
     private String id;
     private String src;
     private String describe;
-    private String a;
+    private String liked;
 
-    public Images(String id, String src, String describe , String a) {
+    public Images(String id, String src, String describe , String liked) {
         this.id = id;
         this.src = src;
         this.describe = describe;
 
-        this.a = a;
+        this.liked = liked;
     }
 
     public Images() {
-
     }
 
     public String getId() {
@@ -46,12 +45,12 @@ public class Images {
         this.describe = describe;
     }
 
-    public String getA() {
-        return a;
+    public String getLiked() {
+        return liked;
     }
 
-    public void setA(String a) {
-        this.a = a;
+    public void setLiked(String liked) {
+        this.liked = liked;
     }
 
     @Override
@@ -60,7 +59,7 @@ public class Images {
                 "id='" + id + '\'' +
                 ", src='" + src + '\'' +
                 ", describe='" + describe + '\'' +
-                ", a='" + a + '\'' +
+                ", liked='" + liked + '\'' +
                 '}';
     }
 }
