@@ -6,14 +6,14 @@ package domain;
  */
 
 public class Article {
-    int id;
-    String title;
-    String author;
-    String content;
-    String date;
-    String times;
-    String type;
-    String imgSrc;
+    private int id;
+    private String title;
+    private String author;
+    private String content;
+    private String date;
+    private String times;
+    private String type;
+    private String imgSrc;
     private String liked;
 
     public String getLiked() {
