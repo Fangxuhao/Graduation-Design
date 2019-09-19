@@ -3,18 +3,28 @@ package domain;
 /**
  * @Author: 方徐浩
  * @Date: 2019/5/17 8:58
+ * @version: $ 2.0
  */
 
 public class Article {
     private int id;
-    private String title;
-    private String author;
-    private String content;
-    private String date;
-    private String times;
-    private String type;
-    private String imgSrc;
-    private String liked;
+    private String title;//标题
+    private String author;//作者
+    private String content;//文章主体
+    private String date;//上传日期
+    private String times;//浏览次数
+    private String type;//文章类别
+    private String imgSrc;//图
+    private String liked;//获赞数量
+    private int recommend;//是否推荐
+
+    public int getRecommend() {
+        return recommend;
+    }
+
+    public void setRecommend(int recommend) {
+        this.recommend = recommend;
+    }
 
     public String getLiked() {
         return liked;
@@ -32,6 +42,7 @@ public class Article {
                 ", type='" + type + '\'' +
                 ", imgSrc='" + imgSrc + '\'' +
                 ", liked='" + liked + '\'' +
+                ", recommend=" + recommend +
                 '}';
     }
 
