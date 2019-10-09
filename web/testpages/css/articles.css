@@ -2,7 +2,7 @@
 .article_search{height:36px;padding-bottom:0;margin-bottom:10px;}
 .article_search .keyword{float:left;height:16px;width:500px;padding:6px;line-height:16px;margin-right: 15px}
 .article_search .submit{float:right;margin-top:5px;}
-#page_article_cat .article_search .keyword, #page_article .article_search .keyword{width:100px;padding:15px;}
+/*#page_article_cat .article_search .keyword, #page_article .article_search .keyword{width:100px;padding:15px;}*/
 
 .articles_page .col_main{width:850px;margin-left:0;}
 .articles_page .col_sub{width:335px;margin-left:15px;}

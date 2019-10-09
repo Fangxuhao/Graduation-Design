@@ -606,7 +606,7 @@ ul.text_list li .type a{display:block;padding-right:5px;color:#069;font-weight:b
 
 /*.nav_wrapper{position:absolute;z-index:101;clear:both;background:#fddfad url('../img/nav_bg.gif') repeat-x left top;margin-left:150px;}*/
 
-.nav{float:left;padding-left:8px;margin-top:8px}
+.nav{float:left;padding-left:8px;}
 
 .nav ul.level_1{float:left;height:29px;padding-right:8px;}
 
@@ -622,11 +622,11 @@ ul.text_list li .type a{display:block;padding-right:5px;color:#069;font-weight:b
 
 .nav a.level_1 strong{display:block;float:left;height:29px;padding-right:11px;}
 
-.nav a.level_1 strong span{display:block;float:left;line-height: 30px;font-size: 18px}
+.nav a.level_1 strong span{display:block;float:left;}
 
 .nav li.current{z-index:101;margin-bottom:-2px;}
 
-.nav li.current a.level_1{padding-left:18px;color:#fff;text-shadow:0 0 0, 0 1px 0 #be0706;}
+.nav li.current a.level_1{padding-left:18px;margin-top:-5px;color:#fff;text-shadow:0 0 0, 0 1px 0 #be0706;}
 
 .nav li.current a.level_1 strong{position:relative;padding-top:4px;padding-bottom:3px;padding-right:17px;margin-right:-1px;background:url('../img/nav_active.gif') no-repeat right top;}
 
@@ -1660,7 +1660,7 @@ li.end_time_wrapper .end_time em{padding:0 3px 0 5px;color:#f04331;font-family:A
 
 .article .download_wrapper{padding:10px 0;text-align:center;}
 
-.article .nearby{margin-top:10px;padding:10px;line-height:18px;background:url('../pageimg/horizontal_spacer.gif') repeat-x left top;}
+.article .nearby{margin-top:10px;padding:10px;line-height:18px;background:url('../img/horizontal_spacer.gif') repeat-x left top;}
 
 .article .nearby .next{float:right;}
 

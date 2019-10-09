@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link type="image/x-icon" href="../Img/ji_s.png" rel="shortcut icon">
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link type="text/css" href="css/blue.css" rel="stylesheet">
+    <script type="text/javascript">if (screen.width >= 1220) {
+        document.getElementsByTagName('html')[0].className = 'wide';
+    }</script>
+    <link type="text/css" href="./css/articles.css" rel="stylesheet">
+    <!--    <script src="./js/pc_nb.js" charset="UTF-8"></script>-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body id="page_user">
+<div id="top">
+    <div class="container">
+        <div class="user_area" id="user_area"><em>欢迎您来到装机大师！</em>
+            <a href="#" class="register">免费注册</a>
+            <a href="#" class="login quick_login">登录</a>
+        </div>
+        <div class="small_nav top_nav_wrapper">
+            <div class="nav">
+                <ul class="level_1">
+                    <li class="level_1 first"><a href="#" class="level_1"><strong><span>用户中心</span></strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="header">
+    <div class="container">
+        <div>
+            <div id="logo"><a href="#" title="装机大师"><img src="../Img/logo.png" width="350px" height="90px"
+                                                         alt="装机大师"></a></div>
+            <div style="float: right;padding-top: 15px">
+                <form action="#" name="search_form" method="get" class="article_search">
+                    <label>
+                        <input type="text" name="keywords" value="" class="keyword">
+                    </label>
+                    <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
+                </form>
+                <div class="articles_notice notice_box"><a href="#">重要通知：本站即将关闭！</a></div>
+            </div>
+        </div>
+        <div class="header_bar">
+            <div class="header_bar_left">&nbsp;</div>
+            <div class="header_bar_right">&nbsp;</div>
+            <div class="nav_wrapper">
+                <div class="nav">
+                    <ul class="level_1" style="margin-top: 8px">
+                        <li class="level_1 first"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">CPU</span></strong></a></li>
+                        <li class="level_1"><a href="#"
+                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="#"
+                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="#"
+                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">硬盘</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="#"
+                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="#"
+                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="user_form_box box thin_box full_box">
+            <div class="hd"><h3></h3>
+                <div class="extra"></div>
+            </div>
+            <div class="bd">
+                <div class="user_form_wrapper clearfix" id="user_form_wrapper">
+                    <form method="post" action="http://www.365pcbuy.com/user.php" class="user_form" id="user_login">
+                        <h1>用户登录</h1>
+                        <div class="req"><b>*</b> 为必填项</div>
+                        <label for="username_login" class="error"><b><span class="req">*</span>用户名：</b>
+                            <input type="text" name="username" value="" tabindex="2" id="username_login"
+                                   original-title="用户名不能为空">
+                            <span id="username_loginValidationMessage" class="validationMessage"></span></label>
+                        <label for="password_login"><b><span class="req">*</span>密码：</b>
+                            <input type="password" name="password" value="" tabindex="3" id="password_login"
+                                   original-title="密码不能为空"><em><a
+                                    href="http://www.365pcbuy.com/user.php?act=get_password">您忘记密码了吗？</a></em>
+                        </label>
+                        <label for="captcha_login"><b><span class="req">*</span>验证码：</b>
+                            <input type="text" name="captcha" maxlength="4" size="6" tabindex="3" class="captcha"
+                                   id="captcha_login"><span original-title="验证码不能为空"><img
+                                    src="" alt="验证码" class="captcha tip"
+                                    original-title="点击刷新验证码"></span>
+                        </label>
+                        <fieldset class="checkbox_wrap label"><b>&nbsp;</b>
+                            <fieldset>
+                                <label for="remember_login"><input type="checkbox" name="remember" value="1"
+                                                                   tabindex="3" class="checkbox" id="remember_login">保持登录</label>
+                            </fieldset>
+                        </fieldset>
+                        <div class="submit_wrap">
+                            <input type="submit" value="登录" tabindex="4" class="submit btn_special btn_login">
+                            <input type="hidden" name="act" value="act_login">
+                            <input type="hidden" name="back_act" value="./index.php">
+                        </div>
+                    </form>
+                    <div class="extra">
+                        <h2>注册新账号</h2>
+                        <p>如果您想登录，需要拥有一个账号。现在就免费注册一个账号吧。</p>
+                        <p><a href="http://www.365pcbuy.com/user.php?act=register" class="button"><span>立即注册</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer2">
+    <div class="container">
+        <div class="box thin_box full_box">
+            <div class="hd">
+                <h3></h3>
+                <div class="extra"></div>
+            </div>
+            <div class="bd">
+                <div class="foot">
+                    <div class="foot_c">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="58%"><a href="http://www.365pcbuy.com/article-5.html">网站简介</a> | <a
+                                        href="http://www.365pcbuy.com/article-4.html">联系我们</a> | <a
+                                        href="http://www.365pcbuy.com/article-7.html">版权声明</a></td>
+                            </tr>
+                            <tr>
+                                <td align="left" class="font_tx">　© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br></td>
+                                <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a><span
+                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./img/beian.png"
+                                                                                                 width="20" height="20"> <a
+                                        target="_blank"
+                                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032"
+                                        style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                      <p
+                              style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
+                      </a> </span> <br></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="loading_box" style="margin-right: -74.5px; opacity: 0; display: none;">正在处理您的请求...</div>
+<ins id="newBridge"><!-- target: nodeBoard -->
+    <ins class="nb-nodeboard-base nb-nodeboard-position-base nb-nodeboard-left-bottom nb-hide" id="nb_nodeboard">
+        <ins class="nb-nodeboard-contain-base nb-nodeboard-contain">
+            <ins class="nb-nodeboard-top nb-nodeboard-top-0">
+                <ins class="nb-head-title">请您留言</ins>
+                <ins class="nb-nodeboard-close" id="nb_nodeboard_close" data-type="min"></ins>
+            </ins>
+            <form id="nb_nodeboard_form" autocomplete="off" class="nb-board-form"
+                  action="http://p.qiao.baidu.com/cps//bookmanage/saveBook.action?userId=23933755" method="post"
+                  accept-charset="utf-8">
+                <ins id="nb_nodeboard_set" class="nb-nodeboard-set">
+                    <ins class="nb-nodeboard-content"><textarea id="nb-nodeboard-set-content-js" name="content"
+                                                                data-ph="请在此输入留言内容，我们会尽快与您联系。（必填）"
+                                                                placeholder="请在此输入留言内容，我们会尽快与您联系。（必填）"
+                                                                class="nb-nodeboard-set-content nb-nodeboard-param"></textarea>
+                    </ins>
+                    <ins class="nb-nodeboard-name" style="z-index:4;">
+                        <ins class="nb-nodeboard-icon nodeName"></ins>
+                        <input id="nb_nodeboard_set_name" data-write="0" name="visitorName" maxlength="30"
+                               class="nb-nodeboard-input nb-nodeboard-param" type="text" data-ph="姓名" placeholder="姓名">
+                    </ins>
+                    <ins class="nb-nodeboard-name" id="nb_nodeboard_phone" style="z-index:3;">
+                        <ins class="nb-nodeboard-icon nodePhone"></ins>
+                        <input id="nb_nodeboard_set_phone" name="visitorPhone" maxlength="30"
+                               class="nb-nodeboard-input nb-nodeboard-param" data-write="1" type="text" data-ph="电话（必填）"
+                               placeholder="电话（必填）"></ins>
+                    <ins class="nb-nodeboard-name" id="nb_nodeboard_mail" style="z-index:2;">
+                        <ins class="nb-nodeboard-icon nodeMail"></ins>
+                        <input id="nb_nodeboard_set_email" name="visitorEmail" maxlength="50"
+                               class="nb-nodeboard-input nb-nodeboard-param" type="text" data-write="0" data-ph="邮箱"
+                               placeholder="邮箱"></ins>
+                    <ins class="nb-nodeboard-name" style="z-index:1;">
+                        <ins class="nb-nodeboard-icon nodeAddress"></ins>
+                        <input id="nb_nodeboard_set_address" name="visitorAddress"
+                               class="nb-nodeboard-input nb-nodeboard-param" maxlength="50" type="text" data-write="0"
+                               data-ph="地址" placeholder="地址"></ins>
+                </ins>
+            </form>
+            <ins class="nb-nodeboard-success" id="nb_nodeboard_success">
+                <ins class="nb-success-box">
+                    <ins class="nb-success-icon"></ins>
+                    <ins class="nb-success-title" id="nb_node_messagetitle">感谢留言</ins>
+                    <ins class="nb-success-content" id="nb_node_messagecontent">我们会尽快与您联系</ins>
+                    <ins id="nb_nodeboard_return" class="nb-sucess-close">关闭</ins>
+                </ins>
+            </ins>
+            <ins class="nb-nodeboard-send" id="nb_node_contain">
+                <ins id="nb_nodeboard_send" class="nb-nodeboard-send-btn nb-nodeboard-send-btn-0">发送</ins>
+            </ins>
+        </ins>
+    </ins><!-- end --><!-- target: iconIcon -->
+    <ins class="nb-icon-wrap nb-icon-base icon-right-center nb-icon-skin-0 nb-icon-icon" id="nb_icon_wrap"
+         style="margin-top:-26px;width:144px;">
+        <ins class="nb-icon-inner-wrap" style="height:52px;width:144px;;">
+            <ins class="nb-icon-bridge0 nb-icon-bridge-base" data-type="iconInvite"></ins>
+        </ins>
+    </ins><!-- end --><!-- target: invite -->
+    <ins class="nb-invite-wrap nb-invite-wrap-base nb-position-base nb-middle  " id="nb_invite_wrap"
+         style="width:400px;display:none;margin-left: -200px;margin-top: -88px;">
+        <ins class="nb-invite-body nb-invite-skin-0" style="height:175px;;">
+            <ins class="nb-invite-tool nb-invite-tool-base" id="nb_invite_tool" style=""></ins>
+            <ins class="nb-invite-text nb-invite-text-base">
+                <ins class="nb-invite-welcome nb-invite-welcome-base nb-show" id="nb_invite_welcome"><p
+                        style="color: #fff">欢迎来到本网站，请问有什么可以帮您？</p></ins>
+            </ins>
+            <ins class="nb-invite-btn-base nb-invte-btns-0">
+                <ins class="nb-invite-cancel nb-invite-cancel-base" id="nb_invite_cancel">稍后再说</ins>
+                <ins class="nb-invite-ok nb-invite-ok-base" id="nb_invite_ok">现在咨询</ins>
+            </ins>
+        </ins>
+    </ins><!-- end --></ins>
+</body>
+</html>
