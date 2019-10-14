@@ -17,8 +17,6 @@
         document.getElementsByTagName('html')[0].className = 'wide';
     }</script>
     <link type="text/css" href="./css/articles.css" rel="stylesheet">
-    <script src="./js/pc_nb.js" charset="UTF-8">
-    </script>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body id="page_articles" class="articles_page">
@@ -47,78 +45,35 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo">
-                <a href="#" title="装机大师">
-                    <img src="./Img/logo.png" width="350px" height="90px" alt="装机大师">
-                </a>
-            </div>
+            <div id="logo"> <a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px" alt="装机大师"></a> </div>
             <div style="float: right;padding-top: 15px">
-                <form action="#" name="search_form" method="get" class="article_search">
+                <form action="#" name="search_form" method="get" class="article_search" >
                     <label>
                         <input type="text" name="keywords" value="" class="keyword">
                     </label>
-                    <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
+                    <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:2.5px">
                 </form>
-                <div class="articles_notice notice_box">
-                    <a href="#">重要通知：本站即将关闭！</a>
-                </div>
+                <div class="articles_notice notice_box" > <a href="#">重要通知：本站即将关闭！</a> </div>
             </div>
         </div>
         <div class="header_bar">
             <div class="header_bar_left">&nbsp;</div>
             <div class="header_bar_right">&nbsp;</div>
             <div class="nav_wrapper">
-                <div class="nav">
+                <div class="nav" >
                     <ul class="level_1" style="margin-top: 8px">
-                        <li class="level_1 first">
-                            <a href="#" class="level_1">
-                                <strong>
-                                    <span style="font-size: 18px;line-height: 30px">首页</span>
-                                </strong>
-                            </a>
-                        </li>
-                        <li class="level_1">
-                            <a href="#" class="level_1">
-                                <strong>
-                                    <span style="font-size: 18px;line-height: 30px">CPU</span>
-                                </strong>
-                            </a>
-                        </li>
-                        <li class="level_1">
-                            <a href="#" class="level_1">
-                                <strong>
-                                    <span style="font-size: 18px;line-height: 30px">GPU</span>
-                                </strong>
-                            </a>
-                        </li>
-                        <li class="level_1">
-                            <a href="#" class="level_1">
-                                <strong>
-                                    <span style="font-size: 18px;line-height: 30px">主板</span>
-                                </strong>
-                            </a>
-                        </li>
-                        <li class="level_1">
-                            <a href="#" class="level_1">
-                                <strong>
-                                    <span style="font-size: 18px;line-height: 30px">硬盘</span>
-                                </strong>
-                            </a>
-                        </li>
-                        <li class="level_1">
-                            <a href="#" class="level_1">
-                                <strong>
-                                    <span style="font-size: 18px;line-height: 30px">显示器</span>
-                                </strong>
-                            </a>
-                        </li>
-                        <li class="level_1">
-                            <a href="#" class="level_1">
-                                <strong>
-                                    <span style="font-size: 18px;line-height: 30px">机箱电源其它</span>
-                                </strong>
-                            </a>
-                        </li>
+                        <li class="level_1 first"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
+                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">CPU</span></strong></a> </li>
+                        <li class="level_1"> <a href="#"
+                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a> </li>
+                        <li class="level_1"> <a href="#"
+                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a> </li>
+                        <li class="level_1"> <a href="#"
+                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">硬盘</span></strong></a> </li>
+                        <li class="level_1"> <a href="#"
+                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a> </li>
+                        <li class="level_1"> <a href="#"
+                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a> </li>
                     </ul>
                 </div>
             </div>
