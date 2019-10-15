@@ -17,12 +17,12 @@ import java.util.Random;
  * @version: 1.0$
  */
 public class CodeUtil {
-    private static int width = 90;// 定义图片的width
-    private static int height = 20;// 定义图片的height
+    private static int width = 180;// 定义图片的width
+    private static int height = 40;// 定义图片的height
     private static int codeCount = 4;// 定义图片上显示验证码的个数
-    private static int xx = 15;
-    private static int fontHeight = 18;
-    private static int codeY = 16;
+    private static int xx = 30;
+    private static int fontHeight = 36;
+    private static int codeY = 32;
     private static char[] codeSequence = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R',
             'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
@@ -66,7 +66,7 @@ public class CodeUtil {
 
         // randomCode用于保存随机产生的验证码，以便用户登录后进行验证。
         StringBuffer randomCode = new StringBuffer();
-        int red = 0, green = 0, blue = 0;
+        int red, green, blue ;
 
         // 随机产生codeCount数字的验证码。
         for (int i = 0; i < codeCount; i++) {
@@ -84,7 +84,7 @@ public class CodeUtil {
             // 将产生的四个随机数组合在一起。
             randomCode.append(code);
         }
-        Map<String,Object> map  =new HashMap<String,Object>();
+        Map<String,Object> map  = new HashMap<>();
         //存放验证码
         map.put("code", randomCode);
         //存放生成的验证码BufferedImage对象

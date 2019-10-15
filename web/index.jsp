@@ -51,7 +51,7 @@
                     <label>
                         <input type="text" name="keywords" value="" class="keyword">
                     </label>
-                    <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:2.5px">
+                    <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
                 </form>
                 <div class="articles_notice notice_box" > <a href="#">重要通知：本站即将关闭！</a> </div>
             </div>

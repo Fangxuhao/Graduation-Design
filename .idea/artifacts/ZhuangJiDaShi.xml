@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ZhuangJiDaShi">
+    <output-path>$PROJECT_DIR$/out/artifacts/ZhuangJiDaShi</output-path>
+    <root id="archive" name="ZhuangJiDaShi.war">
+      <element id="artifact" artifact-name="ZhuangJiDaShi:war exploded" />
+    </root>
+  </artifact>
+</component>

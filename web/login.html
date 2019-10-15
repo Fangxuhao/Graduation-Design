@@ -10,7 +10,6 @@
         document.getElementsByTagName('html')[0].className = 'wide';
     }</script>
     <link type="text/css" href="./css/articles.css" rel="stylesheet">
-    <!--    <script src="./js/pc_nb.js" charset="UTF-8"></script>-->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body id="page_user">
@@ -32,7 +31,7 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo"><a href="#" title="装机大师"><img src="../Img/logo.png" width="350px" height="90px"
+            <div id="logo"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px"
                                                          alt="装机大师"></a></div>
             <div style="float: right;padding-top: 15px">
                 <form action="#" name="search_form" method="get" class="article_search">
@@ -45,8 +44,6 @@
             </div>
         </div>
         <div class="header_bar">
-            <div class="header_bar_left">&nbsp;</div>
-            <div class="header_bar_right">&nbsp;</div>
             <div class="nav_wrapper">
                 <div class="nav">
                     <ul class="level_1" style="margin-top: 8px">
@@ -98,13 +95,12 @@
                         <label for="captcha_login"><b><span class="req">*</span>验证码：</b>
                             <input type="text" name="captcha" maxlength="4" size="6" tabindex="3" class="captcha" id="captcha_login">
                             <span >
-                                <img id="code_img" src="/code" alt="验证码" class="captcha tip" original-title="点击刷新验证码" onclick="changeImg()">
+                                <img id="code_img" src="./code" alt="验证码" class="captcha tip" original-title="点击刷新验证码" onclick="changeImg()">
                             </span>
                         </label>
                         <fieldset class="checkbox_wrap label"><b>&nbsp;</b>
                             <fieldset>
-                                <label for="remember_login"><input type="checkbox" name="remember" value="1"
-                                                                   tabindex="3" class="checkbox" id="remember_login">保持登录</label>
+                                <label for="remember_login"><input type="checkbox" name="remember" value="1" tabindex="3" class="checkbox" id="remember_login">保持登录</label>
                             </fieldset>
                         </fieldset>
                         <div class="submit_wrap">
@@ -144,9 +140,9 @@
                             <tr>
                                 <td align="left" class="font_tx">　© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br></td>
                                 <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a><span
-                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./img/beian.png" width="20" height="20"> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032"
+                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./pageImg/beian.png" width="20" height="20"> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032"
                                         style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-                      <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
+                      <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
                       </a> </span> <br></td>
                             </tr>
                             </tbody>
