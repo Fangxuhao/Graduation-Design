@@ -64,16 +64,11 @@
                     <ul class="level_1" style="margin-top: 8px">
                         <li class="level_1 first"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
                         <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">CPU</span></strong></a> </li>
-                        <li class="level_1"> <a href="#"
-                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a> </li>
-                        <li class="level_1"> <a href="#"
-                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a> </li>
-                        <li class="level_1"> <a href="#"
-                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">硬盘</span></strong></a> </li>
-                        <li class="level_1"> <a href="#"
-                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a> </li>
-                        <li class="level_1"> <a href="#"
-                                                class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a> </li>
+                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a> </li>
+                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a> </li>
+                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">内存硬盘</span></strong></a> </li>
+                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a> </li>
+                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a> </li>
                     </ul>
                 </div>
             </div>
@@ -176,9 +171,9 @@
             <div class="articles_cat left">
                 <div class="header">
                     <h2>
-                        <a href="#">CPU</a>
+                        <a href="CPU.html">CPU</a>
                     </h2>
-                    <a href="#" class="more">更多»</a>
+                    <a href="CPU.html" class="more">更多»</a>
                 </div>
                 <div class="item first">
                     <a href="#" class="image">
@@ -656,17 +651,6 @@
         </div>
     </div>
 </div>
-<!--<script type="text/javascript" src="./js/jquery.js">
-                      </script>-->
-<!--<script type="text/javascript" src="./js/plugins.js">
-                      </script>-->
-<!--<script type="text/javascript" src="./js/lang.js">
-                      </script>-->
-<!--<script type="text/javascript" src="./js/global.js">
-                      </script>-->
-<!--<script type="text/javascript" src="./js/init.js">
-                      </script>-->
-<!--<script type="text/javascript" src="./js/su_new.js">
-                      </script>-->
+<script src="./js/base.js"></script>
 </body>
 </html>

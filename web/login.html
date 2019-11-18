@@ -1,3 +1,4 @@
+<!--用户登录页面-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +32,7 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px"
-                                                         alt="装机大师"></a></div>
+            <div id="logo"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px" alt="装机大师"></a></div>
             <div style="float: right;padding-top: 15px">
                 <form action="#" name="search_form" method="get" class="article_search">
                     <label>
@@ -47,25 +47,13 @@
             <div class="nav_wrapper">
                 <div class="nav">
                     <ul class="level_1" style="margin-top: 8px">
-                        <li class="level_1 first"><a href="#" class="level_1"><strong><span
-                                style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
-                        <li class="level_1"><a href="#" class="level_1"><strong><span
-                                style="font-size: 18px;line-height: 30px">CPU</span></strong></a></li>
-                        <li class="level_1"><a href="#"
-                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a>
-                        </li>
-                        <li class="level_1"><a href="#"
-                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a>
-                        </li>
-                        <li class="level_1"><a href="#"
-                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">硬盘</span></strong></a>
-                        </li>
-                        <li class="level_1"><a href="#"
-                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a>
-                        </li>
-                        <li class="level_1"><a href="#"
-                                               class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a>
-                        </li>
+                        <li class="level_1 first"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">CPU</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">内存硬盘</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a></li>
                     </ul>
                 </div>
             </div>
@@ -75,9 +63,7 @@
 <div id="content">
     <div class="container">
         <div class="user_form_box box thin_box full_box">
-            <div class="hd"><h3></h3>
-                <div class="extra"></div>
-            </div>
+            <div class="hd"></div>
             <div class="bd">
                 <div class="user_form_wrapper clearfix" id="user_form_wrapper">
                     <form method="post" action="http://www.365pcbuy.com/user.php" class="user_form" id="user_login">
@@ -89,13 +75,15 @@
                             <span id="username_loginValidationMessage" class="validationMessage"></span>
                         </label>
                         <label for="password_login"><b><span class="req">*</span>密码：</b>
-                            <input type="password" name="password" value="" tabindex="3" id="password_login"
-                                   ><em><a href="http://www.365pcbuy.com/user.php?act=get_password">您忘记密码了吗？</a></em>
+                            <input type="password" name="password" value="" tabindex="3" id="password_login">
+                            <em><a href="http://www.365pcbuy.com/user.php?act=get_password">您忘记密码了吗？</a></em>
                         </label>
                         <label for="captcha_login"><b><span class="req">*</span>验证码：</b>
-                            <input type="text" name="captcha" maxlength="4" size="6" tabindex="3" class="captcha" id="captcha_login">
-                            <span >
-                                <img id="code_img" src="./code" alt="验证码" class="captcha tip" original-title="点击刷新验证码" onclick="changeImg()">
+                            <input type="text" name="captcha" maxlength="4" size="6" tabindex="3" class="captcha"
+                                   id="captcha_login">
+                            <span>
+                                <img id="code_img" src="./code" alt="验证码" class="captcha tip" original-title="点击刷新验证码"
+                                     onclick="changeImg()">
                             </span>
                         </label>
                         <fieldset class="checkbox_wrap label"><b>&nbsp;</b>
@@ -112,7 +100,8 @@
                     <div class="extra">
                         <h2>注册新账号</h2>
                         <p>如果您想登录，需要拥有一个账号。现在就免费注册一个账号吧。</p>
-                        <p><a href="http://www.365pcbuy.com/user.php?act=register" class="button"><span>立即注册</span></a>
+                        <p>
+                            <a href="registe.html" class="button"><span>立即注册</span></a>
                         </p>
                     </div>
                 </div>
@@ -123,27 +112,28 @@
 <div id="footer2">
     <div class="container">
         <div class="box thin_box full_box">
-            <div class="hd">
-                <h3></h3>
-                <div class="extra"></div>
-            </div>
             <div class="bd">
                 <div class="foot">
                     <div class="foot_c">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                             <tr>
-                                <td width="58%"><a href="http://www.365pcbuy.com/article-5.html">网站简介</a> | <a
-                                        href="http://www.365pcbuy.com/article-4.html">联系我们</a> | <a
-                                        href="http://www.365pcbuy.com/article-7.html">版权声明</a></td>
+                                <td width="58%"><a href="http://www.365pcbuy.com/article-5.html">网站简介</a> |
+                                    <a href="http://www.365pcbuy.com/article-4.html">联系我们</a> |
+                                    <a href="http://www.365pcbuy.com/article-7.html">版权声明</a>
+                                </td>
                             </tr>
                             <tr>
-                                <td align="left" class="font_tx">　© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br></td>
-                                <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a><span
-                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./pageImg/beian.png" width="20" height="20"> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032"
-                                        style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-                      <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
-                      </a> </span> <br></td>
+                                <td align="left" class="font_tx">© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br></td>
+                                <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a>
+                                    <span style="width:300px;margin:0 auto; padding:20px 0;">
+                                        <img src="./pageImg/beian.png" width="20" height="20">
+                                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                                        <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
+                                        </a>
+                                    </span>
+                                    <br>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -156,6 +146,5 @@
 <script src="js/base.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/Login.js"></script>
-
 </body>
 </html>

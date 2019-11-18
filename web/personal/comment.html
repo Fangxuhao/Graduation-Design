@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="image/x-icon" href="../../Img/ji_s.png" rel="shortcut icon">
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <link type="text/css" href="../css/blue.css" rel="stylesheet">
+    <script type="text/javascript">if (screen.width >= 1220) {
+        document.getElementsByTagName('html')[0].className = 'wide';
+    }</script>
+    <link type="text/css" href="../css/articles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+<div class="box">
+    <div class="hd"><h3>我的评论/咨询</h3><div class="extra"></div></div>
+    <div class="bd">
+        <ul class="comment_list clearfix">
+            <li class="odd first">
+                <div class="info">
+                    <span class="name">2019-10-10 14:16</span>
+
+                </div>
+                <div class="talk">
+                    <p class="title"><span class="type">[最新咨询/评论]</span>
+                        极速空间CPU天梯图2019（intel和AMD CPU性能排行）——跟小虫学电脑配置</p>
+                    <p class="text">学到了很多，支持站长，站长加油</p>
+                </div>
+            </li>
+        </ul>
+        <form name="selectPageForm" action="/user.php" method="get">
+            <p class="pagination">
+                <span class="total">总计 1 个记录，共 1 页。</span>
+                <a href="user.php?act=comment_list&amp;page=1" class="first">第一页</a>
+                <a href="user.php?act=comment_list&amp;page=1" class="prev">« 上一页</a>
+                <select name="page" id="page" onchange="selectPage(this)">
+                    <option value="1" selected="">1</option> </select> <a href="user.php?act=comment_list&amp;page=1" class="next">下一页 »</a>
+                <a href="user.php?act=comment_list&amp;page=1" class="last">最末页</a>
+                <input type="hidden" name="act" value="comment_list">
+            </p>
+        </form>
+        <script type="text/javascript">
+            function selectPage(sel){sel.form.submit();}
+        </script>
+    </div>
+</div>
+</body>
+</html>
