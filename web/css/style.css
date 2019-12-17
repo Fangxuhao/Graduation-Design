@@ -4078,32 +4078,6 @@ li.end_time_wrapper .end_time em {
     padding: 7px 0 0;
 }
 
-.comment_list .rank {
-    display: block;
-    float: right;
-    height: 17px;
-    width: 100px;
-    margin-top: 1px;
-    text-indent: -999em;
-    background: url('../pageImg/stars.gif') no-repeat left top;
-}
-
-.comment_list .rank_2 {
-    background-position: 0 -30px;
-}
-
-.comment_list .rank_3 {
-    background-position: 0 -60px;
-}
-
-.comment_list .rank_4 {
-    background-position: 0 -90px;
-}
-
-.comment_list .rank_5 {
-    background-position: 0 -120px;
-}
-
 .message_wrapper {
     margin: 40px auto 50px;
     padding: 10px 50px;

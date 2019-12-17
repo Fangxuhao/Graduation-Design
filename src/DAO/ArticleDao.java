@@ -41,4 +41,17 @@ public interface ArticleDao {
      */
     List<Article> getArticleListByXXX(String XXX,int i);
 
+    /**
+     * 获取i篇指定类型的文章信息
+     * @param type 指定类型
+     * @param i 数量
+     * @return 获取i篇指定类型的文章信息（除文章具体内容）
+     */
+    List<Article> getArticleListByType(String type,int i);
+
+    /**
+     * 更新文章浏览量信息
+     * @param id
+     */
+    void updateArticleViews(String id);
 }

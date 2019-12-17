@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 /**
  * @author ：方徐浩
  * @date ：Created in 2019/9/12 17:36
- * @description：获取日期
+ * @description: 获取日期
  * @version: 1.0$
  */
 public class Date {

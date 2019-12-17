@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link type="text/css" href="css/blue.css" rel="stylesheet">
+    <link type="text/css" href="./css/articles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+<div class="articles_hot" id="all">
+    <h2>热门文章</h2>
+    <div class="item first">
+        <a href="http://www.365pcbuy.com/article-411.html" class="image"><img
+                src="./img/1536756331940101900.jpg"></a>
+        <h3>
+            <a href="http://www.365pcbuy.com/article-411.html">极速空间CPU天梯图2019（intel和AMD
+            CPU性能排行）——跟小虫学电脑配置</a></h3>
+        <span class="time">10-08</span>
+    </div>
+    <div class="item">
+        <a href="http://www.365pcbuy.com/article-398.html" class="image"><img
+                src="./img/1536756405004445652.jpg"></a>
+        <h3><a href="http://www.365pcbuy.com/article-398.html">极速空间显卡天梯图
+            （2019台式显卡和笔记本显卡性能排行）——跟小虫学电脑配置</a></h3>
+        <span class="time">07-17</span>
+    </div>
+</div>
+</body>
+<script type="application/javascript">
+    const all = document.getElementById("all");
+    window.onload = function () {
+        let xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            var num;
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                const obj = JSON.parse(xmlhttp.responseText);
+                let href = "page/" + obj[0].id + ".html";
+                all.innerHTML += "<div class=\"item first\">" +
+                    "<a href=\"http://www.365pcbuy.com/article-411.html\" class=\"image\">" +
+                    "<img src=\"pageImg/" + obj[0].imgSrc + "\">" + "</a>" +
+                    "<h3>" + "<a href=\"" + href + "\"></a></h3>" +
+                    "<span class=\"time\">" + obj[0].date + "</span>" +
+                    "</div>";
+                for (var i = 1; i < obj.length; i++) {
+                    num = i + 1;
+                    href = "page/" + obj[i].id + ".html";
+                    all.innerHTML += "<div class=\"item\">\n" +
+                        "<a href=\""+href+"\" class=\"image\">" +
+                        "<img src=\"pageImg/" + obj[i].imgSrc + "\">" + "</a>" +
+                        "<h3>" + "<a href=\"" + href + "\"></a></h3>" +
+                        "<span class=\"time\">" + obj[i].date + "</span>" +
+                        "</div>";
+                }
+            }
+        };
+        xmlhttp.open("POST", "/article?program=hotArticle", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send();
+    };
+</script>
+</html>

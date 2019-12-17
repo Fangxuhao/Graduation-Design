@@ -14,26 +14,14 @@ const author = document.getElementById("author");
 const article_content = document.getElementById("article_content");
 //文章获赞数
 const liked = document.getElementById("liked");
-//用户栏信息
-const user_area = document.getElementById("user_area");
 
 
 /**
  * 页面加载完成后
  */
 window.onload = function () {
-    const nameCookie = getCookie("name");
-    if (nameCookie !== "") {
-        user_area.innerHTML = "<em>您好&nbsp;fxh</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
-            "<a href=\"#\" class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
-    } else {
-        user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
-            "<a href=\"#\" class=\"register\">免费注册</a>\n" +
-            "<a href=\"#\" class=\"login quick_login\">登录</a>"
-    }
-    if (manyValues() == null && manyValues() === "") {
-        getArticleById(manyValues());
-    }
+
+    getArticleById(manyValues());
 };
 
 
@@ -53,20 +41,16 @@ function getArticleById(id) {
             title.innerHTML = obj[0].title;
             title_path.innerHTML = obj[0].title;
             type_path.innerHTML = obj[0].type;
-            date.innerHTML = obj[0].date;
-            times.innerHTML = obj[0].times;
-            author.innerHTML = obj[0].author;
+            date.innerHTML = "发表时间："+obj[0].date;
+            times.innerHTML ="文章浏览次数："+ obj[0].times;
+            author.innerHTML ="作者："+ obj[0].author;
             article_content.innerHTML = obj[0].content;
-            liked.innerHTML = obj[0].liked;
+            liked.innerHTML ="("+ obj[0].liked+")";
         }
     };
-    xmlhttp.open("POST", "/getArticle", true);
+    xmlhttp.open("POST", "/article", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send("id=" + id);
-
+    xmlhttp.send("id=" + id+"&"+"times=1");
 }
-
-
-
 
 

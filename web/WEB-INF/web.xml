@@ -9,8 +9,17 @@
         <servlet-name>codeServlet</servlet-name>
         <servlet-class>servlet.CodeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>articleServlet</servlet-name>
+        <servlet-class>servlet.ArticleServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>codeServlet</servlet-name>
         <url-pattern>/code</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>articleServlet</servlet-name>
+        <url-pattern>/article</url-pattern>
+    </servlet-mapping>
+
 </web-app>

@@ -2,6 +2,7 @@ package DAO.impl;
 
 import DAO.ArticleDao;
 import domain.Article;
+import org.junit.Test;
 import tool.Date;
 
 import java.util.ArrayList;
@@ -16,19 +17,20 @@ import java.util.List;
 public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     @Override
-    public Article getArticleById(String id)   {
-        String sql = "select * from images where id = ?";
+    public Article getArticleById(String id) {
+        String sql = "select * from article where id = ?";
         return query(sql, id);
     }
 
     @Override
-    public List<Article> getArticleListAll()   {
+    public List<Article> getArticleListAll() {
         String sql = "select * from article";
         return queryForList(sql);
     }
 
+
     @Override
-    public List<String> getArticleTitleListAll()   {
+    public List<String> getArticleTitleListAll() {
         String sql = "select title from article";
         List<Article> articles = queryForList(sql);
         List<String> s = new ArrayList<>();
@@ -40,19 +42,25 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
 
     @Override
-    public long uploadArticle(Article article)   {
+    public long uploadArticle(Article article) {
         String sql = "insert into article values(?,?,?,?,?,?,?,?,?,?)";
-        return insert(sql, 0, article.getTitle(), article.getAuthor(), article.getContent(), new Date().getDate(), 0, article.getType(), article.getImgSrc(),0,0);
+        return insert(sql, 0, article.getTitle(), article.getAuthor(), article.getContent(), new Date().getDate(), 0, article.getType(), article.getImgSrc(), 0, 0);
     }
 
     /**
      * 获取最后发表的10篇文章
+     *
      * @return 后发表的10篇文章信息
      */
     @Override
-    public List<Article> getArticleListByDate()   {
-        String sql="select id, title,date,type,imgSrc from article order by date desc limit 10";
+    public List<Article> getArticleListByDate() {
+        String sql = "select id, title,date,type,imgSrc from article order by date desc limit 10";
         return queryForList(sql);
+    }
+
+    @Test
+    public void test() {
+        System.out.println(getArticleListByType("主板",2));
     }
 
     /**
@@ -61,8 +69,24 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
      * @return 文章信息
      */
     @Override
-    public List<Article> getArticleListByXXX(String XXX,int i) {
-        String sql="select id, title,author,date,times,type,imgSrc,liked from article order by ? desc limit ?";
-        return queryForList(sql,XXX,i);
+    public List<Article> getArticleListByXXX(String XXX, int i) {
+        String sql = "select id, title,author,date,times,type,imgSrc,liked from article order by ? desc limit ?";
+        return queryForList(sql, XXX, i);
+    }
+
+    @Override
+    public List<Article> getArticleListByType(String type, int i) {
+        String sql = "select id, title,author,date,times,type,imgSrc,liked from article  WHERE TYPE= ? limit ?";
+        return queryForList(sql, type, i);
+    }
+
+    /**
+     * 更新文章浏览量
+     * @param id
+     */
+    @Override
+    public void updateArticleViews(String id) {
+        String sql="UPDATE article SET times=times+1 where id =?";
+        update(sql,id);
     }
 }

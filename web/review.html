@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.jgrowl.min.js"></script>
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link type="text/css" href="css/blue.css" rel="stylesheet">
+    <link type="text/css" href="css/articles.css" rel="stylesheet">
+    <link type="text/css" href="css/jquery.jgrowl.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="comment_box box">
+    <div class="hd"><h3>最新咨询/评论</h3>
+        <div class="extra"></div>
+    </div>
+    <div class="bd">
+        <div id="comment_wrapper">
+            <div class="comments" id="comments_all">
+                <ul class="comment_list clearfix" id="comments_list">
+                    <li class="status1">
+                        <div class="info">
+                            <span class="name">****</span>
+                            <span class="time">2019-12-03 15:23</span>
+                        </div>
+                        <div class="talk">
+                            <p class="text"> 1070Ti 连 2060 都干不过 =。= 买来何用。。。 5900XT是第二代吗</p>
+                            <blockquote class="reply"><span class="name">站长回复：</span>
+                                <p>原因详见文中注1，在一些大作中，更看重DX12。5700XT是RDNA家族，详见显卡栏目文章</p></blockquote>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="comment_form">
+                <h2 class="title"><span>请在这里发表你的咨询/评论</span><em class="extra"></em></h2>
+                <form action="/"  method="post" class="form" id="frm">
+                    <fieldset>
+                        <p class="label"><b>用户名：</b>
+                            <em id="name">匿名用户</em>
+                        </p>
+                        <label for="cf_content"><b><span class="req">*</span>内容：</b>
+                            <textarea name="content" rows="6" cols="20" tabindex="7" id="cf_content" maxlength="500" class="textarea" placeholder="最多输入200字"></textarea>
+                        </label>
+                        <label for="cf_captcha"><b><span class="req">*</span>验证码：</b>
+                            <input type="text" name="captcha" size="6" tabindex="8" class="captcha" id="cf_captcha">
+                            <img src="/code" alt="验证码" class="captcha tip" id="code_img"
+                                 onclick="changeImg()" original-title="点击刷新验证码">
+                        </label>
+                        <div class="submit_wrap">
+                            <input type="submit" value="提交"  class="submit btn_s2_b">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/review.js"></script>
+<script type="text/javascript">
+    function changeImg() {//判断是登录也还是注册页
+        var imgSrc = $("#code_img");
+        // alert( img.src="/codeServlet?time="+new Date().getTime());
+        // img.src="/codeServlet?time="+new Date().getTime();
+        // document.getElementById("imgObj")[0].setsrc="/codeServlet?time="+new Date().getTime();
+        var src = imgSrc.attr("src");
+        imgSrc.attr("src", chgUrl(src));
+    }
+    // 时间戳
+    //为了使每次生成图片不一致，即不让浏览器读缓存
+    function chgUrl(url) {
+        var timestamp = (new Date()).valueOf();
+        url = url.substring(0, 20);
+        if ((url.indexOf("&") >= 0)) {
+            url = url + "×tamp=" + timestamp;
+        } else {
+            url = url + "?timestamp=" + timestamp;
+        }
+        return url;
+    }
+</script>
+<script src="js/base.js"></script>
+</body>
+</html>

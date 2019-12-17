@@ -27,7 +27,7 @@ window.onload = function () {
             "<a href=\"#\" class=\"register\">免费注册</a>\n" +
             "<a href=\"#\" class=\"login quick_login\">登录</a>"
     }
-}
+};
 /**
  * 获取cookie值
  * @param cname
@@ -71,19 +71,20 @@ function deleteCookie() {
 //接收多值
 function manyValues() {
     var url = window.location.search;
-    if (url.indexOf("?") != -1) {
+    let strs;
+    if (url.indexOf("?") !== -1) {
         var str = url.substr(1);
         strs = str.split("&");
         var key = new Array(strs.length);
         var value = new Array(strs.length);
-        for (i = 0; i < strs.length; i++) {
-            key[i] = strs[i].split("=")[0]
+        for (let i = 0; i < strs.length; i++) {
+            key[i] = strs[i].split("=")[0];
             value[i] = unescape(strs[i].split("=")[1]);
             // alert(key[i]+"="+value[i]);
         }
-
-        getArticleById(value[0]);
+            return value[0];
     }
+    return null;
 }
 
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Title</title>
+ <link type="text/css" href="css/style.css" rel="stylesheet">
+ <link type="text/css" href="css/blue.css" rel="stylesheet">
+ <link type="text/css" href="./css/articles.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+<div class="articles_new" id="all">
+ <h2>最近更新文章</h2>
+ <div class="item ">
+  <h3><span class="badge badge_1">1</span>
+<a href="article-243.html" target="_blank">一张表看清图灵显卡的区别（参数对比简表）含GTX1650 SUPER </a></h3>
+ </div>
+ <div class="item">
+  <h3><span class="badge badge_2">2</span>
+<a href="article-404.html" target="_blank">Nvidia显卡（N卡）显卡参数速查表（2019年11月版）</a></h3>
+ </div>
+ <div class="item">
+  <h3><span class="badge badge_3">3</span>
+<a href="article-411.html" target="_blank">极速空间CPU天梯图2019（intel和AMD CPU性能排行）——跟小虫学电脑配置</a></h3>
+ </div>
+ </div>
+</div>
+</body>
+<script type="application/javascript">
+    const all = document.getElementById("all");
+    window.onload = function () {
+        let xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            var num;
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                const obj = JSON.parse(xmlhttp.responseText);
+                for (var i = 0; i < obj.length; i++) {
+                 let href = "page/" + obj[i].id + ".html";
+                 num = i + 1;
+                    all.innerHTML += "<div class=\"item \">" +
+                        "<h3><span class=\"badge badge_" +
+                        num+
+                        "\">" +
+                        num +
+                        "</span>" +
+                        "<a href=\"" + href + "\" target=\"_blank\">" +
+                       obj[i].header +
+                        "</a></h3>" +
+                        "</div>"
+                }
+            }
+        };
+        xmlhttp.open("POST", "/article?program=newArticle", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send();
+    };
+</script>
+</html>

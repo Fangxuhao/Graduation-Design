@@ -1,0 +1,49 @@
+package service;
+
+import DAO.ArticleDao;
+import DAO.impl.ArticleDaoImpl;
+import domain.Article;
+
+import java.util.List;
+
+/**
+ * @author ：方徐浩
+ * @date ：Created in 2019/12/12 15:18
+ * @description： 文章服务
+ * @version: 1$
+ */
+public class ArticlesService {
+    private ArticleDao articleDao=new ArticleDaoImpl();
+
+    /**
+     * 获取所有文章信息
+     * @return 所有文章信息
+     */
+    public List<Article> getAllArticles(){
+        return articleDao.getArticleListAll();
+    }
+
+    public void viewsUpdate(String id){
+        articleDao.updateArticleViews(id);
+    }
+
+    /**
+     * 获取以xxx字段为依据排列的前i篇文章信息
+     * @param XXX
+     * @param i
+     * @return
+     */
+    public List<Article> getArticleListByXXX(String XXX, int i){
+        return articleDao.getArticleListByXXX(XXX,i);
+    }
+
+    /**
+     * 获取所有文章标题
+     * @return
+     */
+    public List<String> getArticleTitle(){
+        return articleDao.getArticleTitleListAll();
+    }
+
+
+}
