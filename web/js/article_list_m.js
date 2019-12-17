@@ -10,7 +10,19 @@ const all = document.getElementById("all");
  */
 window.onload = function () {
     let a = manyValues();
-    type.innerHTML = a;
+    if (a==="CPU"){
+        type.innerHTML = "CPU";
+    }else if (a==="MainBoard"){
+        type.innerHTML = "主板";
+    }else if (a==="GPU"){
+        type.innerHTML = "显卡";
+    }else if (a==="MemoryAndHardDisk"){
+        type.innerHTML = "内存硬盘";
+    }else if (a==="Other"){
+        type.innerHTML = "机箱电源其他";
+    }else if (a==="Monitor"){
+        type.innerHTML = "显示器";
+    }
     type.href = a + ".html";
     more.href = a + ".html";
     let xmlhttp;
@@ -43,9 +55,9 @@ window.onload = function () {
             }
         }
     };
-    xmlhttp.open("POST", "/article", true);
+    xmlhttp.open("POST", "/ZhuangJiDaShi_war_exploded/article", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send("program=" + id&"type="+a);
+    xmlhttp.send("program=IAL_5&type="+a);
 };
 
 function manyValues() {

@@ -10,8 +10,8 @@ import java.util.List;
  * @description： 将数据转换为JSON数据
  * @version: 1.0$
  */
-public class getJsonData <T>{
-   String  getJson(List<T> list){
+public class GetJsonData<T>{
+    public  String  getJson(List<T> list){
             return JSONArray.fromObject(list).toString();
     }
 }

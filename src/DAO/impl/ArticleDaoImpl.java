@@ -49,7 +49,6 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     /**
      * 获取最后发表的10篇文章
-     *
      * @return 后发表的10篇文章信息
      */
     @Override
@@ -60,7 +59,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     @Test
     public void test() {
-        System.out.println(getArticleListByType("主板",2));
+        System.out.println(getArticleListByType("主板",1));
     }
 
     /**
@@ -74,9 +73,15 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
         return queryForList(sql, XXX, i);
     }
 
+    /**
+     * 获取最后发表的i篇指定类型文章
+     * @param type 指定类型
+     * @param i 数量
+     * @return
+     */
     @Override
     public List<Article> getArticleListByType(String type, int i) {
-        String sql = "select id, title,author,date,times,type,imgSrc,liked from article  WHERE TYPE= ? limit ?";
+        String sql = "select id, title,author,date,times,type,imgSrc,liked from article  WHERE TYPE= ?  order by date desc limit ?";
         return queryForList(sql, type, i);
     }
 
@@ -89,4 +94,5 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
         String sql="UPDATE article SET times=times+1 where id =?";
         update(sql,id);
     }
+
 }

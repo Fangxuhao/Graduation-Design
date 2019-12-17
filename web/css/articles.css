@@ -159,6 +159,13 @@
     background: #fff;
     border: 1px solid #e4e4e4;
 }
+.articles_cat_right{
+    float: left;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background: #fff;
+}
 
 .articles_cat.left {
     margin-left: 0;

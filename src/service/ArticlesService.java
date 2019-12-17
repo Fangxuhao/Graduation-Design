@@ -45,5 +45,15 @@ public class ArticlesService {
         return articleDao.getArticleTitleListAll();
     }
 
+    /**
+     * 获取最后发表的i篇指定类型文章
+     * @param type 指定类型
+     * @param i 数量
+     * @return
+     */
+    public List<Article> getArticleListByType(String type, int i){
+        return articleDao.getArticleListByType(type,i);
+    }
+
 
 }
