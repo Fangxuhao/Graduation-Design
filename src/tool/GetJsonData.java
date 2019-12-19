@@ -11,7 +11,8 @@ import java.util.List;
  * @version: 1.0$
  */
 public class GetJsonData<T>{
-    public  String  getJson(List<T> list){
+    public  String  getJson(String data){
+        List<T> list = null;
             return JSONArray.fromObject(list).toString();
     }
 }

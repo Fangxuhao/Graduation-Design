@@ -18,7 +18,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     @Override
     public Article getArticleById(String id) {
-        String sql = "select * from article where id = ?";
+        String sql = "select id, title,author,date,times,type,imgSrc,liked from article where id = ?";
         return query(sql, id);
     }
 
@@ -59,7 +59,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     @Test
     public void test() {
-        System.out.println(getArticleListByType("主板",1));
+        System.out.println(getArticleListByType("cpu",1));
     }
 
     /**
@@ -81,7 +81,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
      */
     @Override
     public List<Article> getArticleListByType(String type, int i) {
-        String sql = "select id, title,author,date,times,type,imgSrc,liked from article  WHERE TYPE= ?  order by date desc limit ?";
+        String sql = "select id, title,author,date_format(date,'%m-%d')AS date,times,type,imgSrc,liked from article  WHERE TYPE= ?  order by date desc limit ?";
         return queryForList(sql, type, i);
     }
 

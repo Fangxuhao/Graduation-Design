@@ -16,6 +16,8 @@ const article_content = document.getElementById("article_content");
 const liked = document.getElementById("liked");
 //用户栏信息
 const user_area = document.getElementById("user_area");
+//文章窗口
+const article_iframe = document.getElementById("article_iframe");
 
 
 /**
@@ -24,14 +26,20 @@ const user_area = document.getElementById("user_area");
 window.onload = function () {
     const nameCookie = getCookie("name");
     if (nameCookie !== "") {
-        user_area.innerHTML = "<em>您好&nbsp;fxh</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
+        user_area.innerHTML = "<em>您好&nbsp;" +
+            nameCookie +
+            "</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
             "<a href=\"#\" class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
     } else {
         user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
-            "<a href=\"#\" class=\"register\">免费注册</a>\n" +
-            "<a href=\"#\" class=\"login quick_login\">登录</a>"
+            "<a href=\"register.html\" class=\"register\">免费注册</a>\n" +
+            "<a href=\"login.html\" class=\"login quick_login\">登录</a>"
     }
-    if (manyValues() == null && manyValues() === "") {
+    article_iframe.src="page/" +
+        manyValues()+
+        ".html";
+    if (manyValues()!== null && manyValues() !== "") {
+        alert(article_iframe.src);
         getArticleById(manyValues());
     }
 };
@@ -41,6 +49,7 @@ window.onload = function () {
  * 通过id获取文章信息
  */
 function getArticleById(id) {
+    alert(111);
     let xmlhttp;
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
@@ -60,9 +69,9 @@ function getArticleById(id) {
             liked.innerHTML = obj[0].liked;
         }
     };
-    xmlhttp.open("POST", "/getArticle", true);
+    xmlhttp.open("POST", "./getArticle", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send("id=" + id);
+    xmlhttp.send("program=getDataById&id=" + id);
 
 }
 

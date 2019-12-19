@@ -33,8 +33,10 @@ window.onload = function () {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            const obj = JSON.parse(xmlhttp.responseText);
-            let href = "page/" + obj[0].id + ".html";
+            // var obj = eval("("+xmlhttp.responseText+")");
+            var obj = $.parseJSON(xmlhttp.responseText);
+            // alert(obj);
+            let href = "read.html?id=" + obj[0].id;
             all.innerHTML += "<div class=\"item first\">" +
                 "<a href=\"" + href + "\" class=\"image\">" +
                 "<img src=\"pageImg/" + obj[0].imgSrc + "\">" +
@@ -45,12 +47,12 @@ window.onload = function () {
                 "<span class=\"time\">" + obj[0].date + "</span>" +
                 "</div>";
             for (var i = 1; i < obj.length; i++) {
-                href="page/" + obj[i].id + ".html";
+                href= "read.html?id=" + obj[i].id;
                 all.innerHTML += "<div class=\"item\">" +
                     "<h3>" + "<span class=\"badge\"></span>" +
                     "<a href=\"" + href + "\" target=\"_blank\">" + obj[i].title + "</a>" +
                     "</h3>" +
-                    "<span class=\"time\">" + obj[0].date+ "</span>" +
+                    "<span class=\"time\">" + obj[i].date+ "</span>" +
                     "</div>";
             }
         }

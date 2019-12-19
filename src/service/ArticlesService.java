@@ -55,5 +55,7 @@ public class ArticlesService {
         return articleDao.getArticleListByType(type,i);
     }
 
-
+    public Article getArticleDataById(String id){
+        return articleDao.getArticleById(id);
+    }
 }

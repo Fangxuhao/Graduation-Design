@@ -1,6 +1,7 @@
 package servlet;
 
 import domain.Article;
+import net.sf.json.JSONArray;
 import service.ArticlesService;
 import tool.GetJsonData;
 
@@ -20,16 +21,28 @@ public class ArticleServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
-
         String program = request.getParameter("program");
+        String data = null;
         if (program.equals("IAL_5")){//获取首页文章小列表
             String type=request.getParameter("type");
-            String data=getIndexArticlesListMin(type);
+           data=getIndexArticlesListMin(type);
+        }else if (program.equals("getDataById")){
+            String id=request.getParameter("id");
+            data=getArticleDataById(id);
+        }
+        if (data != null && !data.equals("")) {
             response.getWriter().print(data);
         }
+    }
 
-
-
+    /**
+     * 获取指定id的文章信息
+     * @param id
+     * @return
+     */
+    private String getArticleDataById(String id) {
+        Article articleDate=new ArticlesService().getArticleDataById(id);
+        return JSONArray.fromObject(articleDate).toString();
     }
 
     /**
@@ -39,7 +52,7 @@ public class ArticleServlet extends HttpServlet {
      */
     private String getIndexArticlesListMin(String type) {
         List<Article> articleList=new ArticlesService().getArticleListByType(type,5);
-        return new GetJsonData<>().getJson(Collections.singletonList(articleList));
+        return JSONArray.fromObject(articleList).toString();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
