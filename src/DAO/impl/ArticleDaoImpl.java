@@ -95,4 +95,15 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
         update(sql,id);
     }
 
+    /**
+     * 更新文章点赞数信息
+     * @param id
+     */
+    @Override
+    public void updateArticleLikeds(String id) {
+        String sql="UPDATE article SET liked=liked+1 where id =?";
+        update(sql,id);
+        System.out.println("liked11");
+    }
+
 }

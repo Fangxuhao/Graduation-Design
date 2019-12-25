@@ -26,13 +26,51 @@ public class ArticleServlet extends HttpServlet {
         if (program.equals("IAL_5")){//获取首页文章小列表
             String type=request.getParameter("type");
            data=getIndexArticlesListMin(type);
-        }else if (program.equals("getDataById")){
+        }else if (program.equals("getDataById")){//获取指定id文章的信息
             String id=request.getParameter("id");
             data=getArticleDataById(id);
+        }else if (program.equals("addTimes")){//更新文章浏览量
+            String id=request.getParameter("id");
+           updateArticleViews(id);
+        }else if (program.equals("liked")){//点赞加一
+            String id=request.getParameter("id");
+            System.out.println("liked");
+            updateArticleLikeds(id);
+        }else if (program.equals("newArticle")){//获取10篇最新文章
+           data=getNewArticles();
         }
         if (data != null && !data.equals("")) {
             response.getWriter().print(data);
         }
+    }
+
+    /**
+     * 获取新文章
+     * @return
+     */
+    private String getNewArticles() {
+        List<Article> articleList=articlesService.getArticleListByDate();
+        System.out.println(JSONArray.fromObject(articleList).toString());
+        return JSONArray.fromObject(articleList).toString() ;
+    }
+
+    private ArticlesService articlesService=new ArticlesService();
+    /**
+     * 更新文章点赞量
+     * @param id
+     */
+    private void updateArticleLikeds(String id) {
+        articlesService.likedsUpdate(id);
+    }
+
+
+
+    /**
+     * 更新文章浏览量
+     * @param id
+     */
+    private void updateArticleViews(String id) {
+        articlesService.viewsUpdate(id);
     }
 
     /**
@@ -41,7 +79,8 @@ public class ArticleServlet extends HttpServlet {
      * @return
      */
     private String getArticleDataById(String id) {
-        Article articleDate=new ArticlesService().getArticleDataById(id);
+        Article articleDate=articlesService.getArticleDataById(id);
+        System.out.println(JSONArray.fromObject(articleDate).toString());
         return JSONArray.fromObject(articleDate).toString();
     }
 
@@ -51,12 +90,11 @@ public class ArticleServlet extends HttpServlet {
      * @return JSON数据
      */
     private String getIndexArticlesListMin(String type) {
-        List<Article> articleList=new ArticlesService().getArticleListByType(type,5);
+        List<Article> articleList=articlesService.getArticleListByType(type,5);
         return JSONArray.fromObject(articleList).toString();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
-
     }
 }

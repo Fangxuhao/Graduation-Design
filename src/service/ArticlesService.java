@@ -13,49 +13,62 @@ import java.util.List;
  * @version: 1$
  */
 public class ArticlesService {
-    private ArticleDao articleDao=new ArticleDaoImpl();
+    private ArticleDao articleDao = new ArticleDaoImpl();
 
     /**
      * 获取所有文章信息
+     *
      * @return 所有文章信息
      */
-    public List<Article> getAllArticles(){
+    public List<Article> getAllArticles() {
         return articleDao.getArticleListAll();
     }
 
-    public void viewsUpdate(String id){
+    public void viewsUpdate(String id) {
         articleDao.updateArticleViews(id);
     }
 
+
     /**
      * 获取以xxx字段为依据排列的前i篇文章信息
+     *
      * @param XXX
      * @param i
      * @return
      */
-    public List<Article> getArticleListByXXX(String XXX, int i){
-        return articleDao.getArticleListByXXX(XXX,i);
+    public List<Article> getArticleListByXXX(String XXX, int i) {
+        return articleDao.getArticleListByXXX(XXX, i);
     }
 
     /**
      * 获取所有文章标题
+     *
      * @return
      */
-    public List<String> getArticleTitle(){
+    public List<String> getArticleTitle() {
         return articleDao.getArticleTitleListAll();
     }
 
     /**
      * 获取最后发表的i篇指定类型文章
+     *
      * @param type 指定类型
-     * @param i 数量
+     * @param i    数量
      * @return
      */
-    public List<Article> getArticleListByType(String type, int i){
-        return articleDao.getArticleListByType(type,i);
+    public List<Article> getArticleListByType(String type, int i) {
+        return articleDao.getArticleListByType(type, i);
     }
 
-    public Article getArticleDataById(String id){
+    public Article getArticleDataById(String id) {
         return articleDao.getArticleById(id);
+    }
+
+    public void likedsUpdate(String id) {
+        articleDao.updateArticleLikeds(id);
+    }
+
+    public List<Article> getArticleListByDate() {
+        return articleDao.getArticleListByDate();
     }
 }

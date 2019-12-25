@@ -35,11 +35,9 @@ window.onload = function () {
             "<a href=\"register.html\" class=\"register\">免费注册</a>\n" +
             "<a href=\"login.html\" class=\"login quick_login\">登录</a>"
     }
-    article_iframe.src="page/" +
-        manyValues()+
-        ".html";
+    let data=manyValues();
+    article_iframe.src+=data+ ".html";
     if (manyValues()!== null && manyValues() !== "") {
-        alert(article_iframe.src);
         getArticleById(manyValues());
     }
 };
@@ -49,7 +47,6 @@ window.onload = function () {
  * 通过id获取文章信息
  */
 function getArticleById(id) {
-    alert(111);
     let xmlhttp;
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
@@ -58,24 +55,76 @@ function getArticleById(id) {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            const obj = JSON.parse(xmlhttp.responseText);
-            title.innerHTML = obj[0].title;
-            title_path.innerHTML = obj[0].title;
-            type_path.innerHTML = obj[0].type;
-            date.innerHTML = obj[0].date;
-            times.innerHTML = obj[0].times;
-            author.innerHTML = obj[0].author;
-            article_content.innerHTML = obj[0].content;
-            liked.innerHTML = obj[0].liked;
+            var obj = $.parseJSON(xmlhttp.responseText);
+            var ads=obj[0].title
+            alert(ads);
+            if (obj[0].title!==null){
+                title_path.innerHTML = obj[0].title;
+                type_path.innerHTML = obj[0].type;
+            }
+
         }
     };
-    xmlhttp.open("POST", "./getArticle", true);
+    xmlhttp.open("POST", "./article", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("program=getDataById&id=" + id);
 
 }
 
+/**
+ * 获取cookie值
+ * @param cname
+ * @returns {string}
+ */
+function getCookie(cname) {
+    const name = cname + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        const c = ca[i].trim();
+        if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
 
-
+/**
+ * 删除所有cookei
+ */
+function deleteCookie() {
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    }
+    if (cookies.length > 0) {
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            var domain = location.host.substr(location.host.indexOf('.'));
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=" + domain;
+        }
+    }
+    window.location.href = "index.jsp"
+}
+//接收多值
+function manyValues() {
+    var url = window.location.search;
+    let strs;
+    if (url.indexOf("?") !== -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        var key = new Array(strs.length);
+        var value = new Array(strs.length);
+        for (let i = 0; i < strs.length; i++) {
+            key[i] = strs[i].split("=")[0];
+            value[i] = unescape(strs[i].split("=")[1]);
+            // alert(key[i]+"="+value[i]);
+        }
+        return value[0];
+    }
+    return null;
+}
 
 

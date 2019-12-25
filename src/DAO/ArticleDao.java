@@ -54,4 +54,11 @@ public interface ArticleDao {
      * @param id
      */
     void updateArticleViews(String id);
+
+    /**
+     * 更新文章点赞数信息
+     * @param id
+     */
+    void updateArticleLikeds(String id);
+
 }

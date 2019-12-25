@@ -5,6 +5,7 @@
     <title>article</title>
     <link type="text/css" href="../css/style.css" rel="stylesheet">
     <link type="text/css" href="../css/blue.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
     <script type="text/javascript">if (screen.width >= 1220) {
         document.getElementsByTagName('html')[0].className = 'wide';
     }</script>
@@ -16,8 +17,12 @@
     <div class="hd"><h3></h3><div class="extra"></div></div>
     <div class="bd">
         <div class="article_title clearfix">
-            <h1>老U有点妖，价在天上飘，精选配置实现电脑免费升级</h1>
-            <p class="article_info"><span class="time">最近更新时间：2019-09-03</span>&nbsp;<span class="author">文章浏览次数：10385&nbsp; &nbsp; 作者：pc小虫</span>&nbsp;<span class="label_original">原创</span> </p>
+            <h1 id="title">文章标题</h1>
+            <p class="article_info">
+                <span class="time" id="date">发表时间：2019-11-10</span>&nbsp;
+                <span class="time" id="times">文章浏览次数：2165</span>&nbsp;&nbsp;
+                <span class="time" id="author">作者：pc小虫</span>&nbsp;
+            </p>
         </div>
         <div class="article_content"><p><span style="color: rgb(128, 0, 128);">这是一篇电脑升级的文章，涉及到二手电脑配件折旧，其折旧价格均为成都某二手商家的”回收价“，这个价格低于市场价，但能迅速回笼现金。不同地域、时间价格通常不同，此文具有较强的时效性，这点特别注意。</span></p>
             <p><span style="font-size: 18px;">前言</span></p>
@@ -85,12 +90,12 @@
             <div class="like-wrapper current-like">
                 <span class="label">赞</span>
                 <span class="like-count" id="liked">(28)</span>
-                <a href="#"><img src="../pageImg/praise.png" alt="赞"></a>
+                <button id="likedA" onclick="likedP(25)" style="border: 0"><img src="../pageImg/praise.png" alt="赞"></button>
             </div>
         </div>
     </div>
 </div>
-<script src="./js/base.js"></script>
-<script src="./js/article.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/article.js"></script>
 </body>
 </html>

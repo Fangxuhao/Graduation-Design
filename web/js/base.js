@@ -14,20 +14,21 @@ function chgUrl(url) {
     return url;
 }
 
-/**
- * 页面加载完成后
- */
-window.onload = function () {
-    const nameCookie = getCookie("name");
-    if (nameCookie !== "") {
-        user_area.innerHTML = "<em>您好&nbsp;fxh</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
-            "<a href=\"#\" class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
-    }else {
-        user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
-            "<a href=\"#\" class=\"register\">免费注册</a>\n" +
-            "<a href=\"#\" class=\"login quick_login\">登录</a>"
-    }
-};
+// /**
+//  * 页面加载完成后
+//  */
+// window.onload = function () {
+//     const nameCookie = getCookie("name");
+//     if (nameCookie !== "") {
+//         user_area.innerHTML = "<em>您好&nbsp;fxh</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
+//             "<a href=\"#\" class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
+//     }else {
+//         user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
+//             "<a href=\"#\" class=\"register\">免费注册</a>\n" +
+//             "<a href=\"#\" class=\"login quick_login\">登录</a>"
+//         alert("base");
+//     }
+// };
 /**
  * 获取cookie值
  * @param cname
