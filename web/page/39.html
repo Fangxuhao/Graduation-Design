@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>article</title>
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <link type="text/css" href="../css/blue.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">if (screen.width >= 1220) {
+        document.getElementsByTagName('html')[0].className = 'wide';
+    }</script>
+    <link type="text/css" href="../css/articles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+<div class="article box thin_box">
+    <div class="hd"><h3></h3><div class="extra"></div></div>
+    <div class="bd">
+        <div class="article_title clearfix">
+            <h1 id="title">文章标题</h1>
+            <p class="article_info">
+                <span class="time" id="date">发表时间：2019-11-10</span>&nbsp;
+                <span class="time" id="times">文章浏览次数：2165</span>&nbsp;&nbsp;
+                <span class="time" id="author">作者：pc大湿</span>&nbsp;
+            </p>
+        </div>
+
+        <div class="article_content">
+            <p><strong><span style="color: rgb(0, 153, 0);">此文发表于2018年10月6日</span>
+            </strong></p>
+            <p>都知道内存高频率比低频率快，双通道比单通道速度快，关键是，快多少？吃一颗米也是吃饭，吃一碗也是吃饭，数量的不同会有完全不同的结果。同样，双通道比单通道快的幅度会影响我们的选购决策。</p>
+            <p>此文讨论的“快”，并不是指内存本身速度，而是内存对整机性能的影响。要单独算内存速度快多少没有多大意义，如同有甲乙两个学生，甲的物理总成绩3000分，乙的2400分，就说甲成绩比乙好是显然不行的，如果他们学的是计算机软件专业，那么物理成绩在总成绩中占的比重并不大，不能根据24:30，就说甲的成绩比乙好25%。<span style="color: rgb(128, 0, 128);">因此本文的实测将不会使用内存专业测试软件</span>。</p>
+            <p>阅读此文将解答你的以下疑惑：</p>
+            <p>1、在锐龙的独显平台上，高频内存（DDR4-3000以上频率）比普通频率内存（DDR4-2133-2666）的速度（注1）快多少？</p>
+            <p>2、锐龙平台是否应该用双通道内存，用双通道比单通道快多少？</p>
+            <p>3、哪种情况要买双通道，哪种情况买单通道。</p>
+            <p>实测有点枯燥乏味，不想看的可跳过直接看文章末尾给出的结论。</p>
+            <p>————————————————</p>
+            <p><span style="color: rgb(0, 0, 128);"><span style="font-size: 16px;">双通道比单通道快多少？以前我们已经讲过，分两种情况：</span></span></p>
+            <p>1、核心显卡情况：intel的核显的性能，用双通道会比单通道快12%（从酷睿六代到八代适用），AMD 锐龙APU核显的性能，用双通道比单通道快50%。（锐龙一代和二代适用）</p>
+            <p>2、独立显卡情况：intel 酷睿八代平台，双通道比单通道大约快5%。</p>
+            <p>那么，锐龙二代用独显的情况如何呢？</p>
+            <p><span style="color: rgb(0, 0, 128);"><span style="font-size: 16px;">比赛选手：</span></span></p>
+            <p>DDR4-2133单通道、DDR4-2667单通道、DDR4-2400双通道（等效DDR4-4800超高频）</p>
+            <p>由于</p>
+            <p>3000/2400=1.25</p>
+            <p>2667/2133=1.25</p>
+            <p>因此，DDR4-2133和2667的性能差距，大约相当于DDR4-2400和DDR4-3000的差距，知道了这个一会看测试结果，再讨论是否应该购买DDR4-3000内存，就简单多了。</p>
+            <p><img src="/images/upload/201810/R5-2600-mem-f.jpg" alt="锐龙二代平台双通道比单通道快多少" width="660" height="500" data-bd-imgshare-binded="1"></p>
+            <p><span style="color: rgb(0, 0, 128);"><strong><span style="font-size: 18px;">&nbsp;测试结果解读：</span></strong></span></p>
+            <p>1、加入CINEBENCH R15，是为了测试高频对CPU性能的发挥会不会有影响，结论是：不会。</p>
+            <p>2、3DMARK反应了整机的性能，偏重于图形处理能力，测试结果和下面的游戏表现对比，说明了测试软件和实际游戏表现是不同的。</p>
+            <p>3、PCMARK10衡量整机的性能，测试结果DDR4-2666内存比2133提升了1%，但DDR4-4800比DDR4-2666没有任何提升。</p>
+            <p>4、3A游戏实测，三个游戏的提升幅度平均值为7%，从2133频率到4800提升13%推出2400到4800能提升大约10%，而在intel第八代酷睿平台中，DDR4-2400单双通的在《绝地求生》游戏中FPS差距为5%，因此虽然样本偏少，但这个数值比较靠谱，原因其一是内存频率对独显主机性能的影响要远小于集成显卡，其二是AMD的核心架构的一直依赖于内存性能才能更好发挥性能，从集成显卡的巨大差距就能一看端倪。</p>
+            <p><span style="color: rgb(0, 0, 128);"><strong><span style="font-size: 18px;">结论：</span></strong></span></p>
+            <p><span style="font-size: 16px;">1、<span style="color: rgb(128, 0, 128);">如果以大型游戏为主，锐龙应尽量搭配双通道内存，</span>DDR4-2400具备较高性价比（DDR4-2666可供选择的品牌较少），如果只用8GB，那么可选择4GBX2，这又涉及到主板的选择，差价不大应该选4根内存插槽主板，要不后期扩容会比较麻烦。</span></p>
+            <p><span style="font-size: 16px;">2、频率越高，其提升的幅度越少，从2133到2666频率提升了25%，对应性能提升7%，而从2133到4800，提升幅度为125%，但也只提升了10%，因此<span style="color: rgb(128, 0, 128);">游戏性能并不是和频率提升呈现成正比例关系</span>，频率越高提升幅度越小，DDR4-3000以上频率内存，由于一根内存会贵100多元，因此并不划算。</span></p>
+            <p><span style="font-size: 16px;">3、如果只用于一般办公娱乐和小游戏，内存频率从2133到2400有1%提升，但频率达到2400后提升的幅度极小，甚至双通道的幅度也极小，可以不予考虑。</span></p>
+            <p>（注：之后补充测试了8GB-2400和8GB-2400X2的PCMARK10得分，分别为6108和6120，进一步证实了以上第三点结论）</p>
+            <p>&nbsp;</p>
+            <p><strong><span style="color: rgb(0, 0, 128);"><span style="font-size: 16px;">通过以上结论可以帮助我们在选购的时候做出决策——用途决定单双</span></span></strong></p>
+            <p>对于玩大中型游戏的用户，如果选择8GB，今天价格：</p>
+            <p><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5bFQYUB1UdUyUCFgRcHl8VBxsBXCsfSlpMWGVCHlBDGRlLQx5BXg1cAAQJS14MB1EYUhAGEgJcHVIKW1dbCCshF1B5ABBmL3BAWmExXQ4PfXsBAFk7GQ58BFQbUgkCExtUHEoVARkHVRBaETISB1YaUhMLEwBQK1sUAxMCXRJaFwAiN1Uaa1RsEQZdHFoSMhIHXRNSFgYbDlwrWxEAGwFdE1oSBhsCXCtcJUlJUh1SUxUyIgdRGFIQBhICXB1SJTIiN1UrWCVAfARUG1IVAxMAOxhZEQEQA1Y%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsRARsCURteHAQbGAxeB0g%3D">金泰克4GB-2400&nbsp; &nbsp;219元&nbsp; 两根438元 查看详情&gt;&gt;</a></p>
+            <p><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5bFQYUB1UdUyUCFgRcHl8VBxsBUysfSlpMWGVCHlBDGRlLQx5BXg1cAAQJS14MB1EYUhAGEgJcHV0KW1dbCCs4Fkd3flBDC3BndAVcEjkPRWpzKk4NGQ58BFQbUgkCExtUHEoVARkHVBBeEDISB1YaUhMLEwBQK1sUAxMCXRJaFwAiN1Uaa1RsEQZdHFoSMhIHXRNSFgYbDlwrWxEAGwFdE1oQBxAEVStcJUlJUh1SUxUyIgdRGFIQBhICXB1dJTIiN1UrWCVAfARUG1IVAxMAOxhZEQEQA1Y%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsRARsCURteHAQUGAxeB0g%3D">金泰克8GB-2400&nbsp; 409元&nbsp; &nbsp;查看详情&gt;&gt;</a></p>
+            <p>买两根4GB多花29元，但能带来7%游戏性能提升，没有比这个更划算的事情了。</p>
+            <p>对于办公和普通娱乐的用户，可以忽略单双通道极其微小的差异，选购的时候要以实用性为主，因此用：2根内存插槽的B350M/B450M 板+8GB单根条，具备更低的成本，更高的性价比。</p>
+            <p>&nbsp;</p>
+          </div>
+
+        <div class="footer-share clearfix">
+            <div class="like-wrapper current-like">
+                <span class="label">赞</span>
+                <span class="like-count" id="liked">(28)</span>
+                <button id="likedA" onclick="likedP(39)" style="border: 0"><img src="../pageImg/praise.png" alt="赞"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/base.js"></script>
+<script src="../js/article.js"></script>
+</body>
+</html>

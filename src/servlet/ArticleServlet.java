@@ -38,10 +38,21 @@ public class ArticleServlet extends HttpServlet {
             updateArticleLikeds(id);
         }else if (program.equals("newArticle")){//获取10篇最新文章
            data=getNewArticles();
+        }else if (program.equals("hotArticle")){//获取10篇最新文章
+            data=getHotArticles();
         }
         if (data != null && !data.equals("")) {
             response.getWriter().print(data);
         }
+    }
+
+    /**
+     * 获取热门文章
+     * @return
+     */
+    private String getHotArticles() {
+        List<Article> articleList=articlesService.getHotArticleList();
+        return JSONArray.fromObject(articleList).toString() ;
     }
 
     /**
@@ -50,7 +61,7 @@ public class ArticleServlet extends HttpServlet {
      */
     private String getNewArticles() {
         List<Article> articleList=articlesService.getArticleListByDate();
-        System.out.println(JSONArray.fromObject(articleList).toString());
+//        System.out.println(JSONArray.fromObject(articleList).toString());
         return JSONArray.fromObject(articleList).toString() ;
     }
 

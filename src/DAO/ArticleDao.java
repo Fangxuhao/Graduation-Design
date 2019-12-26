@@ -61,4 +61,10 @@ public interface ArticleDao {
      */
     void updateArticleLikeds(String id);
 
+    /**
+     * 获取热门文章
+     * @return
+     */
+    List<Article> getHotArticleList();
+
 }

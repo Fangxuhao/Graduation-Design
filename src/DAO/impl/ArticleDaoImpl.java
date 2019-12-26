@@ -59,9 +59,12 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     @Test
     public void test() {
-        System.out.println(getArticleListByType("cpu",1));
+        System.out.println(getArticleListByXXX("recommend",12));
     }
-
+@Test
+    public void  te1(){
+        System.out.println(getArticleListByXXX("recommend",12));
+    }
     /**
      * 获取以xxx为依据排列的前i篇文章信息
      * @param XXX 作为排列依据的列
@@ -69,7 +72,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
      */
     @Override
     public List<Article> getArticleListByXXX(String XXX, int i) {
-        String sql = "select id, title,author,date,times,type,imgSrc,liked from article order by ? desc limit ?";
+        String sql = "select id, title,author,date,times,type,imgSrc,liked,recommend from article order by ? desc limit ?";
         return queryForList(sql, XXX, i);
     }
 
@@ -104,6 +107,13 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
         String sql="UPDATE article SET liked=liked+1 where id =?";
         update(sql,id);
         System.out.println("liked11");
+    }
+
+    @Override
+    public List<Article> getHotArticleList() {
+        String sql = "select id, title,author,date,times,type,imgSrc,liked,recommend from article where recommend=1";
+
+        return null;
     }
 
 }

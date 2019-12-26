@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>article</title>
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <link type="text/css" href="../css/blue.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">if (screen.width >= 1220) {
+        document.getElementsByTagName('html')[0].className = 'wide';
+    }</script>
+    <link type="text/css" href="../css/articles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+<div class="article box thin_box">
+    <div class="hd"><h3></h3><div class="extra"></div></div>
+    <div class="bd">
+        <div class="article_title clearfix">
+            <h1 id="title">文章标题</h1>
+            <p class="article_info">
+                <span class="time" id="date">发表时间：2019-11-10</span>&nbsp;
+                <span class="time" id="times">文章浏览次数：2165</span>&nbsp;&nbsp;
+                <span class="time" id="author">作者：pc大湿</span>&nbsp;
+            </p>
+        </div>
+
+        <div class="article_content"><p><span style="font-size: 16px;"><span style="color: rgb(0, 153, 0);"><strong>此文于5月11日更新</strong></span></span></p>
+            <p>这是一篇有关主板选购技术文章，主要说明intel和AMD的主板对睿频的支持有哪些细节不同。由于大多数用户都不会，而且我也不建议超频，因此，主板对睿频的支持就显得重要了。</p>
+            <p>很多并不超频的用户也乐意选购intel带K和AMD带X的处理器，原因是其本身默认频率和睿频较高，睿频是指用户无需动手设置，也不需要运行任何超频软件，CPU会根据使用情况（如负载、温度、电压、功耗等）综合判定后，自动提升运行频率。</p>
+            <p>由于可能比较晦涩，下面让我们把CPU比喻成发动机，主板比喻成汽车，先模拟一个场景吧。</p>
+            <p><span style="color: rgb(0, 0, 128);"><strong>intel推出了“英特牌汽车”</strong></span></p>
+            <p>销售员：欢迎光临，这里是有三款，分别是3系（H310），5系（B360），7系（Z370），当然是7系好啊......</p>
+            <p>顾客：嗯，我不玩飙车，在采用i7 8700K引擎的时候，这几个系列的最高速度是一样的，对吗？那我买3系好了。</p>
+            <p>销售员（心想）：哦，这你都知道，3系列是利润最薄的......</p>
+            <p><span style="color: rgb(0, 0, 128);"><strong>AMD推出了"爱萌牌“汽车</strong></span></p>
+            <p>销售员：欢迎光临，这里是有四款，分别是32系（A320），35系（B350），37系（X370）和47系（X470），当然是带7的好啊......</p>
+            <p>顾客：请问在采用R7-2700X引擎的时候，这几个系列的最高速度是一样的，对吗？</p>
+            <p>销售员：不一样，32和35系不能支持完整的XFR2，X47系的速度会快一点，32、35、37都不支持XFR 2 Enhanced</p>
+            <p>顾客：这么复杂，那我再想想.....</p>
+            <p><span style="color: rgb(0, 0, 128);"><span style="font-size: 16px;"><strong>在不进行手动超频，AMD锐龙X处理器随着主板的不同，运行的频率略有不同，而intel的K处理器是相同的！这才是二者在主板最大不同之处！</strong></span></span></p>
+            <p>什么USB支持接口数量、SATA3数量不同都没有意义，当主板不同会导致CPU性能不同的时候，这个差异就必须要纳入性价比分析中，因为，我们分析性价比除了性能外，要看CPU的价格，也要考虑主板的价格。</p>
+            <p>其实这并不是什么新鲜事，在锐龙一代1800X发布的时候，就已经说明（下图）：用X370可以最好的发挥睿频性能！</p>
+            <p><img src="../pageImg/1800-XFR.jpg" alt="锐龙XFR" width="790" height="413" data-bd-imgshare-binded="1"></p>
+            <p><span style="color: rgb(128, 0, 128);"><strong>再举一个实例（在不进行手动超频的时候）：</strong></span></p>
+            <p>小王的电脑是i5-6500+Z170主板，将CPU升级到i7-7700K（同步需要升级主板的BIOS），CPU跨代提升，主板能发挥7700K的全部性能</p>
+            <p>小张的电脑是AMD 1600+X370主板，将CPU升级到AMD 2700X（同步需要升级主板的BIOS），CPU跨代提升，主板不能发挥2700X的全部性能</p>
+            <p>&nbsp;<img src="../pageImg/AMD-300-400.jpg" alt="X470 、X370、B350、A320区别" width="790" height="628" data-bd-imgshare-binded="1"></p>
+            <p>可以说，在睿频加法的运用上，intel远远不如AMD：</p>
+            <p>intel酷睿八代：睿频=睿频</p>
+            <p>8700处理器：4.6=3.2+1.4（睿频） &nbsp; &nbsp;</p>
+            <p>8700K处理器：4.7=3.7+1（睿频）</p>
+            <p>AMD 锐龙二代：睿频=CPU基本睿频+XFR2（第二代智能扩频技术，相当于第二级睿频，设为X）+XFR 2 Enhanced（第二代智能扩频增强技术，相当于第三级睿频，设为Y）</p>
+            <p>R7-2700处理器：4.1+X+Y=3.2+0.9（基本睿频）+X+Y</p>
+            <p>R7-2700X处理器：4.35+X+Y=3.7+ 0.65（基本睿频）+X+Y &nbsp;</p>
+            <p>注：实际上这个加法还更复杂，这里未包含锐龙的precision boost2（第二代精准频率提升）300/400芯片组都支持，和Precision Boost Overdrive（可达到主板和散热器极限，400芯片组支持），这里未列入讨论</p>
+            <p>如想深入了解AMD锐龙的技术，导读：<a href="http://www.365pcbuy.com/article-198.html">小白也能看懂锐龙高科技：戏说AMD锐龙七大武林绝学&gt;&gt;</a></p>
+            <p>&nbsp;</p>
+            <p><span style="color: rgb(128, 0, 128);">从上面看出，AMD的加法远比intel复杂，在不进行手动超频的时候，要想发挥锐龙带X 处理器的全部实力，也需要买更贵的主板！</span><span style="color: rgb(0, 0, 128);">从这点上看，AMD不是农民，更像一个精明的商人，因为主板芯片组的利润是很大的一块。但对于普通消费者来说，这个加法太过复杂！</span></p>
+            <p>但是，如果不需要超频，从性价比角度看，要首选B350M小板，因为XFR 2 Enhanced的幅度非常小，&nbsp;详细测试由于内容比较多，另文详述。</p>
+            <p>&nbsp;</p>
+            <p><strong><span style="color: rgb(0, 0, 128);"><span style="font-size: 18px;">&nbsp;一些补充知识</span></span></strong></p>
+            <p>1、什么是睿频和超频。</p>
+            <p>睿频：是指用户无需动手设置，也不需要运行任何超频软件，CPU会根据使用情况（如负载、温度、电压、功耗等）综合判定后，自动提升运行频率。</p>
+            <p>超频：是必须用户手动进行提升频率，其方式为修改BIOS设置和使用超频软件，无论哪种方式，都需要用户动手完成。</p>
+            <p>2、现在酷睿八代intel i5以上带了睿频（i3为定频），带K的可以超频。AMD 锐龙CPU全系列带睿频，并可以超频。</p>
+            <p>intel最新的300系列 ：H310、B360、H370、Z370区别如下，可以清楚看出，只有Z370可以超频，看起来不太厚道，但是，</p>
+            <p>intel的最大优点是：如果你不需要超频，买最低的H310+i7-8700K，其性能和搭配Z370没有任何区别！最低的H310没有限制睿频！</p>
+            <p>如果怕浪费了这个K，那么8700+H310M+SATA3固态就是黄金组合！</p>
+            <p>注：华硕H310 的M.2接口是PCI-E 2.0 X2 ，速度只有10Gb/s，这会导致HP EX900出现瓶颈，而20Gb/s则相当于2.46GB/s，大于HP EX900的最高速度，因此，在选择H310且需要M.2固态的时候，要看清楚这个M.2接口的速度一定要是20Gb/s。当然，如果你选的是顶级NVME固态，就没必要用H310M了，用B360M更合适，其M.2接口带宽为32Gb/s。</p>
+            <p><img src="../pageImg/300-200-100.jpg" alt="intel H310\B360\Z370区别" width="790" height="510" data-bd-imgshare-binded="1"></p>
+        </div>
+
+        <div class="footer-share clearfix">
+            <div class="like-wrapper current-like">
+                <span class="label">赞</span>
+                <span class="like-count" id="liked">(28)</span>
+                <button id="likedA" onclick="likedP(42)" style="border: 0"><img src="../pageImg/praise.png" alt="赞"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/base.js"></script>
+<script src="../js/article.js"></script>
+</body>
+</html>

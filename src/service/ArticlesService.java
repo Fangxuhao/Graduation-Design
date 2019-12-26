@@ -3,6 +3,7 @@ package service;
 import DAO.ArticleDao;
 import DAO.impl.ArticleDaoImpl;
 import domain.Article;
+import org.junit.Test;
 
 import java.util.List;
 
@@ -70,5 +71,9 @@ public class ArticlesService {
 
     public List<Article> getArticleListByDate() {
         return articleDao.getArticleListByDate();
+    }
+
+    public List<Article> getHotArticleList() {
+        return articleDao.getArticleListByXXX("recommend",12);
     }
 }

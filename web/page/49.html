@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>article</title>
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <link type="text/css" href="../css/blue.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">if (screen.width >= 1220) {
+        document.getElementsByTagName('html')[0].className = 'wide';
+    }</script>
+    <link type="text/css" href="../css/articles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+<div class="article box thin_box">
+    <div class="hd"><h3></h3><div class="extra"></div></div>
+    <div class="bd">
+
+        <div class="article_content"><p><span style="color: rgb(255, 0, 0);"><span style="font-size: 20px;">&nbsp;电源是一台电脑最重要的配件，对，是最重要。</span></span></p>
+            <p>&nbsp;很多消费者都非常关心“CPU、主板、内存”等型号，殊不知，电源才是整个机器的心脏，负责运算动力的供应，电源差了，轻则使用中蓝屏或重启，重则烧毁主板硬盘。选电源最重要的是看额定功率，很多电源标称最大400W但额定功率实际上连200W都没有，一些电源型号数字吓人，什么ATX450、ATX500等，让人误以为这个450或者500就是功率，有的配置单上的机箱电源栏上写着：“ATX 300W 38度”，这样的说法非常模糊，“ATX 38度”只能说明结构和符合Intel 38度规范，最大的问题在于“300W”，并没有说明电源品牌和型号，也没有说明是“最大功率”还是“额定功率”，这样装的机能让人放心吗？</p>
+            <p>我们买电源首选要看铭牌上有没有【额定功率】参数，有一些电源仅仅标注了【峰值功率】【最大功率】【总功率】等，这些都不是额定功率。&nbsp; &nbsp; &nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 电源如果功率不足，则容易出现死机或自动重启动，那么，初学者怎么判断用多少瓦的电源合适呢？首先，我们先复习一下“峰值功率”、“最大功率”、“额定功率”。<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong><font color="#0000ff">额定功率</font></strong>：环境温度在-5～50度之间，输入电压在180V～264之间，电源长时间稳定输出的功率。比如，一台电源的额定功率是否300W，其含义是每天24小时、每年平均365天持续工作时，所有负载之和不能超过期300W。额定功率代表了一台电源真正的负载能力。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff"><strong>最大功率</strong>：</font>在常温下，输入电压在200V~240V之间，电源可以长时间稳定输出的功率，最大功率一般比额定功率要大30%左右。现在很多厂商不标额定功率，只标最大功率，是因为额定功率较低，标上去不好卖。</p>
+            <p>&nbsp;&nbsp;<strong>&nbsp;&nbsp;<font color="#0000ff">峰值功率：</font></strong>电源在瞬间内能承受的负载。时间仅能维持3秒至30秒之间，也就是常讲的OPP功率。峰值功率与使用环境与条件有关系，不是一个确定值，峰值功率可以很大，一般来说比额定功率大40%以上。</p>
+            <p>其中：最大功率和峰值功率二者含义比较接近，&nbsp;实际选购中，应该以<strong><font color="#0000ff">额定功率</font></strong>作为最主要参考标准。目前常用的配置中决定用多大功率的电源，关键在用什么CPU和显卡。</p>
+            <p>&nbsp;《鲁大师》提供了计算一台电脑峰值功率的功能，但里面的峰值功率均为官方的TDP功耗，这个TDP功耗并非峰值功耗，比如同样TDP都=80W的，intel处理器的真实峰值功耗就比AMD低。不过在实际选购的时候，可以按照以下公式计算电源所需的功率：</p>
+            <p><span style="color: rgb(0, 0, 255);"><span style="font-size: 20px;">电源的额定功率=鲁大师估算的峰值功率/0.6</span></span>&nbsp;</p>
+            <p><span style="color: rgb(0, 0, 255);"><strong><span style="font-size: 16px;">简化计算公式</span></strong></span></p>
+            <p><span style="color: rgb(255, 102, 0);"><span style="font-size: 16px;">电源额定功率=【（CPU的TDP+显卡的TDP）+50W】/0.6</span></span></p>
+            <p>&nbsp; &nbsp; 除以0.6，这是冗余原则，即电源的额定功率比实际峰值功耗还高30-50%为佳。很多非专业装机店为了降低成本，这样配置的主机只配了几十元的电源，这类低价格电源往往虚标：最大400W，而且在很长时间内也不容易出问题，这是因为这些电脑配件同时达到最大功耗的情况较少（如玩小游戏的时候显卡CPU没有满载），但这样的配置这样配置是不适合的，小马拉大车会增加出故障的概率。</p>
+            <p>&nbsp;<span style="color: rgb(0, 0, 255);"><strong>组装电脑电源功率计算小知识——</strong></span></p>
+            <p>1、intel采用核心显卡的组装电脑基本上可以不考虑功耗问题，一般额定200W以上即可。而高端游戏电脑最大的耗电大户就是显卡，因此显卡的功耗决定了用多大额定功率的电源。</p>
+            <p>2、电源上有+12V1、+12V2（或者只有+12V）、+5V、+3.3V.....等，我们只需记住+12V最重要。Intel在2.0版规范中首次提出了双路+12V输出的概念，12V2为CPU单独供电，12V1则主要为显卡进行供电。</p>
+            <p>3、TDP功耗并不是真实满载功耗，但在计算硬件功耗的时候，可以把TDP作为满载功耗数据来近似计算。鲁大师软件提供了【硬件峰值功耗计算】功能，可以算一下。</p>
+            <p>4、电脑主机的理论满载功耗假设为300W，并不能搭配额定300W电源，因为需要“冗余”一定的空间，才能确保主机稳定运行。一般冗余度为30%-50%。</p>
+            <p>&nbsp;例如：主流配置（双硬盘）：i5-6500 &nbsp; TDP 65W &nbsp; &nbsp;B150主板：10W &nbsp; 8G内存：3W， 120G SSD：2W &nbsp;希捷1TB：8W，GTX1060：120W &nbsp; &nbsp; 光驱+键鼠：15W，风扇1个：3W，合计：226W，那么此机型应该搭配（按照冗余度40%）计算：223/(1-40%)=376W。因此实际配机过程中，搭配额定400W电源为主流选择。当然，这个额定400并非绝对，如果是国产一线品牌电源，用额定350W都可以，但杂牌电源可能有不同程度虚标，额定400也不一定能稳定。目前一些擅长网上炒作的品牌，号称某国多么著名，价格也很便宜，实际连自己的工厂都没有，是找一些二线代工厂OEM，质量只能呵呵了。</p>
+            <p>从上面例子中看出，影响一台主机（主流配置）功耗的最大两个配件就是CPU和显卡，其余配件（根据选装的不同）相加的功率大概为：40-50W</p>
+            <p>热点问答</p>
+            <p><span style="color: rgb(128, 0, 128);">问： TDP估算的功率加30-50%冗余后，还需要考虑转换效率吗？</span><br>
+                答：不用考虑了。电源的额定功率和转换效率是没有关系的，额定400W电源，无论转换效率是多少，就能额定输出400W的功率（杂牌Y货除外）。</p>
+            <p>电源转换效率是电源的输出功率与输入功率的比值。</p>
+            <p>假设一台额定400W电源，转换效率为80%，装在一台i5-7500主机上，实际输出240W，则输入功率为240W/80%=300W，10小时要用：300WX10h=3kwh（3度电）</p>
+            <p>由此看出，转换效率越高越省电。那么能节省多少呢？<br>
+                以上面额定400W的电源，输出功率按240W计算，如果该电源的转换效率为80%，它的输入功率约在240/80%=300W，若该电源转换效率为70%，此时需要的输入功率为240/70%=343W，每小时要多用343-300=43W。也就是说，80%转换效率的电源，比70%转换效率的电源每小时要节省的电能是0.043kwh，如果每天用5小时，一年能省下0.043x5x365＝78度电，以每度电0.6元计算，一年能节约的费用约为78X0.6=46.8元。</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+          </div>
+        <div class="footer-share clearfix">
+            <div class="like-wrapper current-like">
+                <span class="label">赞</span>
+                <span class="like-count" id="liked">(28)</span>
+                <button id="likedA" onclick="likedP(49)" style="border: 0"><img src="../pageImg/praise.png" alt="赞"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/base.js"></script>
+<script src="../js/article.js"></script>
+</body>
+</html>
