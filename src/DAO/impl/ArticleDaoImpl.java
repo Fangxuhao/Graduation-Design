@@ -49,6 +49,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     /**
      * 获取最后发表的10篇文章
+     *
      * @return 后发表的10篇文章信息
      */
     @Override
@@ -59,14 +60,17 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     @Test
     public void test() {
-        System.out.println(getArticleListByXXX("recommend",12));
+        System.out.println(getArticleListByType("CPU", 999));
     }
-@Test
-    public void  te1(){
-        System.out.println(getArticleListByXXX("recommend",12));
+
+    @Test
+    public void te1() {
+        System.out.println(getRecommemdArticleList());
     }
+
     /**
      * 获取以xxx为依据排列的前i篇文章信息
+     *
      * @param XXX 作为排列依据的列
      * @return 文章信息
      */
@@ -78,42 +82,59 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
 
     /**
      * 获取最后发表的i篇指定类型文章
+     *
      * @param type 指定类型
-     * @param i 数量
+     * @param i    数量
      * @return
      */
     @Override
     public List<Article> getArticleListByType(String type, int i) {
-        String sql = "select id, title,author,date_format(date,'%m-%d')AS date,times,type,imgSrc,liked from article  WHERE TYPE= ?  order by date desc limit ?";
-        return queryForList(sql, type, i);
+        String sql;
+        if (i == 999) {
+            sql = "select * from article  WHERE TYPE= ?";
+            return queryForList(sql, type);
+        } else {
+             sql = "select id, title,author,date_format(date,'%m-%d')AS date,times,type,imgSrc,liked from article  WHERE TYPE= ?  order by date desc limit ?";
+            return queryForList(sql, type, i);
+        }
+
     }
 
     /**
      * 更新文章浏览量
+     *
      * @param id
      */
     @Override
     public void updateArticleViews(String id) {
-        String sql="UPDATE article SET times=times+1 where id =?";
-        update(sql,id);
+        String sql = "UPDATE article SET times=times+1 where id =?";
+        update(sql, id);
     }
 
     /**
      * 更新文章点赞数信息
+     *
      * @param id
      */
     @Override
     public void updateArticleLikeds(String id) {
-        String sql="UPDATE article SET liked=liked+1 where id =?";
-        update(sql,id);
+        String sql = "UPDATE article SET liked=liked+1 where id =?";
+        update(sql, id);
         System.out.println("liked11");
     }
 
     @Override
     public List<Article> getHotArticleList() {
-        String sql = "select id, title,author,date,times,type,imgSrc,liked,recommend from article where recommend=1";
+        String sql = "select id, title,date,type,imgSrc from article order by liked desc limit 10";
 
-        return null;
+        return queryForList(sql);
+    }
+
+    @Override
+    public List<Article> getRecommemdArticleList() {
+        String sql = "select id, title,author,content,date,times,type,imgSrc,liked,recommend from article where recommend=1";
+
+        return queryForList(sql);
     }
 
 }

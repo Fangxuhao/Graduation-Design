@@ -18,7 +18,7 @@
                     const obj = JSON.parse(data);
                     var num;
                  for (var i = 0; i < obj.length; i++) {
-                        let href = "page/" + obj[i].id + ".html";
+                     let href = "read.html?id=" + obj[i].id;
                         num = i + 1;
                         all.innerHTML += "<div class=\"item \">" +
                             "<h3><span class=\"badge badge_" +

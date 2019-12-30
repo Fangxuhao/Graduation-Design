@@ -74,6 +74,10 @@ public class ArticlesService {
     }
 
     public List<Article> getHotArticleList() {
-        return articleDao.getArticleListByXXX("recommend",12);
+        return articleDao.getHotArticleList();
+    }
+
+    public List<Article> getRecommemdArticleList() {
+        return articleDao.getRecommemdArticleList();
     }
 }

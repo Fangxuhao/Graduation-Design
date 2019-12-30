@@ -62,6 +62,7 @@ window.onload = function () {
     xmlhttp.send("program=IAL_5&type="+a);
 };
 
+
 function manyValues() {
     var url = window.location.search;
     let strs;

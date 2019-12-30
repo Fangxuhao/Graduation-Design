@@ -36,7 +36,7 @@ window.onload = function () {
             "<a href=\"login.html\" class=\"login quick_login\">登录</a>"
     }
     let data=manyValues();
-    article_iframe.src+=data+ ".html";
+    article_iframe.src="./page/"+data+ ".html";
     if (manyValues()!== null && manyValues() !== "") {
         getArticleById(manyValues());
     }
@@ -56,8 +56,6 @@ function getArticleById(id) {
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             var obj = $.parseJSON(xmlhttp.responseText);
-            var ads=obj[0].title
-            alert(ads);
             if (obj[0].title!==null){
                 title_path.innerHTML = obj[0].title;
                 type_path.innerHTML = obj[0].type;

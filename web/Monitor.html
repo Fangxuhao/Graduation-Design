@@ -1,11 +1,12 @@
-<!--CPU页面-->
+<!--模板页面-->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="wide" lang="en">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>装机大湿-电脑配置专业研究网站！</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>显示器_硬件知识_装机大湿-电脑配置专业研究网站！</title>
+    <link type="image/x-icon" href="Img/ji_s.png" rel="shortcut icon">
     <link type="text/css" href="css/style.css" rel="stylesheet">
-    <link type="image/x-icon" href="./Img/ji_s.png" rel="shortcut icon">
     <link type="text/css" href="css/blue.css" rel="stylesheet">
     <script type="text/javascript">if (screen.width >= 1220) {
         document.getElementsByTagName('html')[0].className = 'wide';
@@ -16,7 +17,9 @@
 <body id="page_article_cat">
 <div id="top">
     <div class="container">
-        <div class="user_area" id="user_area">
+        <div class="user_area" id="user_area"><em>欢迎您来到装机大师！</em>
+            <a href="#" class="register">免费注册</a>
+            <a href="#" class="login quick_login">登录</a>
         </div>
         <div class="small_nav top_nav_wrapper">
             <div class="nav">
@@ -30,7 +33,7 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px"
+            <div id="logo"><a href="#" title="装机大师"><img src="../Img/logo.png" width="350px" height="90px"
                                                          alt="装机大师"></a></div>
             <div style="float: right;padding-top: 15px">
                 <form action="#" name="search_form" method="get" class="article_search">
@@ -70,12 +73,17 @@
 </div>
 <div id="content">
     <div class="container">
-        <p class="breadcrumbs"><a href="index.jsp">文章首页</a> <code>&gt;</code>
-            <a href="CPU.html" id="type_path">CPU</a><code>&gt;</code>
-            <a href="#" id="title_path">CPasdasd</a></p>
+        <p class="breadcrumbs"><a href="index.jsp">文章首页</a> <code>&gt;</code> <a href="#">显示器</a></p>
         <div class="col_main">
-            <div class="articles_cat_wappper" style="width: 985px;height:100%">
-                <iframe src="" width="100%" scrolling="no" height="100%" id="article_iframe"></iframe>
+            <div class="articles_cat_wappper">
+                <div class="col_a">
+                    <div class="articles_list clearfix">
+                        <iframe src="article_list.html?type=Monitor" width="100%" height="1500px" scrolling="no"></iframe>
+                    </div>
+                </div>
+                <div class="col_b">
+                    <iframe src="hot.html" height="1205px"></iframe>
+                </div>
             </div>
         </div>
         <div class="col_sub">
@@ -122,19 +130,19 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                             <tr>
-                                <td width="58%"><a href="index.jsp">网站简介</a> | <a
-                                        href="index.jsp">联系我们</a> | <a
-                                        href="index.jsp">版权声明</a></td>
+                                <td width="58%"><a href="#l">网站简介</a> | <a
+                                        href="#">联系我们</a> | <a
+                                        href="#">版权声明</a></td>
                             </tr>
                             <tr>
                                 <td align="left" class="font_tx">　© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br></td>
                                 <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a><span
-                                        style="width:300px;margin:0 auto; padding:20px 0;">
-                                    <img src="./pageImg/beian.png" width="20" height="20">
-                                    <a target="_blank"
+                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./img/beian.png" width="20" height="20"> <a
+                                        target="_blank"
                                         href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032"
                                         style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-                      <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
+                      <p
+                              style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
                       </a> </span> <br></td>
                             </tr>
                             </tbody>
@@ -145,28 +153,6 @@
         </div>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="js/read.js"></script>
-<script >
-    /**
-     * 自动调整iframe窗口大小
-     */
-    window.onresize = function () {
-        reinitIframe();
-    };
-    function reinitIframe(){
-        var iframe = document.getElementById("article_iframe");
-        try{
-            var bHeight = iframe.contentWindow.document.body.scrollHeight;
-            var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-            var height = Math.min(bHeight, dHeight);
-            iframe.height = height+50;
-            // console.log(iframe.height);
-        }catch (ex){}
-    }
-    // 定时触发
-    window.setInterval("reinitIframe()", 200);
-
-</script>
+<script src="./js/base.js"></script>
 </body>
 </html>

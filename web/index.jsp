@@ -1,4 +1,6 @@
-<%--
+<%@ page import="service.ArticlesService" %>
+<%@ page import="java.util.List" %>
+<%@ page import="domain.Article" %><%--
   Created by IntelliJ IDEA.
   User: FXH
   Date: 2019/9/9
@@ -45,30 +47,38 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo"> <a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px" alt="装机大师"></a> </div>
+            <div id="logo"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px"
+                                                         alt="装机大师"></a></div>
             <div style="float: right;padding-top: 15px">
-                <form action="#" name="search_form" method="get" class="article_search" >
+                <form action="#" name="search_form" method="get" class="article_search">
                     <label>
                         <input type="text" name="keywords" value="" class="keyword">
                     </label>
                     <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
                 </form>
-                <div class="articles_notice notice_box" > <a href="#">重要通知：本站即将关闭！</a> </div>
+                <div class="articles_notice notice_box"><a href="#">重要通知：本站即将关闭！</a></div>
             </div>
         </div>
         <div class="header_bar">
             <div class="header_bar_left">&nbsp;</div>
             <div class="header_bar_right">&nbsp;</div>
             <div class="nav_wrapper">
-                <div class="nav" >
+                <div class="nav">
                     <ul class="level_1" style="margin-top: 8px">
-                        <li class="level_1 first"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
-                        <li class="level_1"> <a href="CPU.html" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">CPU</span></strong></a> </li>
-                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a> </li>
-                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a> </li>
-                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">内存硬盘</span></strong></a> </li>
-                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a> </li>
-                        <li class="level_1"> <a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a> </li>
+                        <li class="level_1 first"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
+                        <li class="level_1"><a href="CPU.html" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">CPU</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">GPU</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">主板</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">内存硬盘</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">显示器</span></strong></a></li>
+                        <li class="level_1"><a href="#" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a></li>
                     </ul>
                 </div>
             </div>
@@ -79,117 +89,116 @@
     <div class="container">
         <div class="col_main">
             <div class="articles_featured clearfix">
-                <div class="item first">
-                    <a href="#" class="image">
-                        <img src="pageImg/1567671917616279051.jpg" width="200" height="150" alt="tu">
-                    </a>
-                    <h3>
-                        <span class="badge badge_1">1</span>
-                        <a href="#" target="_blank">再探锐龙3700X的主板搭配：比武招亲，毛头小伙和中产男谁赢芳心</a>
-                    </h3>
-                    <p class="content">前言&nbsp;
-                        远而望之，皎若太阳升朝霞；迫而察之，灼若芙蕖出渌波...锐龙3700X大美人要比武招亲，这消息如同一枚核弹，冲击波瞬间覆盖了整个城市。X399起了个大早，准备去秀一波四通道功夫，刚出了大门就遇到X570。
-                        X399：“听说A320那小子和你比了一场，还输了？这不可能啊！”
-                        X570长叹一口气：“哎！出了点岔子，实际也算个平手。”
-                        X399：“那怎么判你负？”
-                        X570：“你有所不知，按规则，功夫一样的情况，就比颜值、身材、比潜力、比品德。”
-                        X399：“那你哪点不如他？”
-                        X570无奈地说：“哥，这事说来有点霉，上周三晚上在街口玩漂移，撞坏了个..</p>
-                    <span class="time">09-05</span>
-                </div>
-                <div class="item left">
-                    <h3>
-                        <span class="badge badge_2">2</span>
-                        <a href="#" target="_blank">老U有点妖，价在天上飘，精选配置实现电脑免费升级</a>
-                    </h3>
-                    <span class="time">09-03</span>
-                </div>
-                <div class="item">
-                    <h3>
-                        <span class="badge badge_3">3</span>
-                        <a href="#" target="_blank">同为6核12线程，R5-3600和i7-8700谁的肌肉更发达？</a>
-                    </h3>
-                    <span class="time">08-20</span>
-                </div>
-                <div class="item left">
-                    <h3>
-                        <span class="badge badge_4">4</span>
-                        <a href="#" target="_blank">可怜虫竟然化身为龙！AMD NAVI显卡相当于第几代N卡？</a>
-                    </h3>
-                    <span class="time">07-14</span>
-                </div>
-                <div class="item">
-                    <h3>
-                        <span class="badge badge_5">5</span>
-                        <a href="#" target="_blank">“英雄"遇英雄就变成了狗熊，锐龙全军覆灭，抽丝剥茧找原因</a>
-                    </h3>
-                    <span class="time">03-01</span>
-                </div>
-                <div class="item left">
-                    <h3>
-                        <span class="badge badge_6">6</span>
-                        <a href="#" target="_blank">PBO和傻工人加班的故事：从热血澎湃到满心无奈只有2分钟的距离</a>
-                    </h3>
-                    <span class="time">11-01</span>
-                </div>
-                <div class="item">
-                    <h3>
-                        <span class="badge badge_7">7</span>
-                        <a href="#" target="_blank">赔了夫人又折兵（二）超过数量临界点，CPU核心越多越慢</a>
-                    </h3>
-                    <span class="time">09-21</span>
-                </div>
-                <div class="item left">
-                    <h3>
-                        <span class="badge badge_8">8</span>
-                        <a href="#" target="_blank">绝壁四千尺，手抖恐闪失：高频内存再超频，探索内存性价比（intel核显平台）</a>
-                    </h3>
-                    <span class="time">03-20</span>
-                </div>
-                <div class="item">
-                    <h3>
-                        <span class="badge badge_9">9</span>
-                        <a href="#" target="_blank">单枪匹马入沙场，双剑合璧霸天下：探索双通道高频内存性价比（AMD独显平台）</a>
-                    </h3>
-                    <span class="time">04-07</span>
-                </div>
-                <div class="item left">
-                    <h3>
-                        <span class="badge badge_10">10</span>
-                        <a href="#" target="_blank">Intel和AMD哪个好？春风得意马蹄缓，没想咸鱼把身翻</a>
-                    </h3>
-                    <span class="time">11-14</span>
-                </div>
-                <div class="item">
-                    <h3>
-                        <span class="badge badge_11">11</span>
-                        <a href="#" target="_blank">小白也能看懂锐龙高科技：戏说AMD锐龙七大武林绝学</a>
-                    </h3>
-                    <span class="time">08-30</span>
-                </div>
+                <%
+                    ArticlesService articlesService = new ArticlesService();
+                    List<Article> articleList = articlesService.getRecommemdArticleList();
+
+                    String first = "<div class=\"item first\">\n" +
+                            "<a href=\"#\" class=\"image\">\n" + "<img src=\"pageImg/" + articleList.get(0).getImgSrc() + "\" width=\"200\" height=\"150\" alt=\"tu\">\n" + "</a>\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_1\">1</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(0).getId() + "\" target=\"_blank\">" + articleList.get(0).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<p class=\"content\">" + articleList.get(0).getContent() + "</p>\n" +
+                            "<span class=\"time\">" + articleList.get(0).getDate() + "</span>\n" +
+                            "</div>" +
+                            "<div class=\"item left\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_2\">2</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(1).getId() + "\" target=\"_blank\">" + articleList.get(1).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(1).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_3\">3</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(2).getId() + "\" target=\"_blank\">" + articleList.get(2).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(2).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item left\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_4\">4</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(3).getId() + "\" target=\"_blank\">" + articleList.get(3).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(3).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_5\">5</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(0).getId() + "\" target=\"_blank\">" + articleList.get(4).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(4).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item left\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_6\">6</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(5).getId() + "\" target=\"_blank\">" + articleList.get(5).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(5).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_7\">7</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(6).getId() + "\" target=\"_blank\">" + articleList.get(6).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(6).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item left\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_8\">8</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(7).getId() + "\" target=\"_blank\">" + articleList.get(7).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(7).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_9\">9</span>\n" +
+                            "<a href=\"" +
+                            "read.html?id=" + articleList.get(8).getId() + "\" target=\"_blank\">" + articleList.get(8).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(8).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item left\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_10\">10</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(9).getId() + "\" target=\"_blank\">" + articleList.get(9).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(9).getDate() + "</span>\n" +
+                            "</div>\n" +
+                            "<div class=\"item\">\n" +
+                            "<h3>\n" +
+                            "<span class=\"badge badge_11\">11</span>\n" +
+                            "<a href=\"" + "read.html?id=" + articleList.get(10).getId() + "\" target=\"_blank\">" + articleList.get(10).getTitle() + "</a>\n" +
+                            "</h3>\n" +
+                            "<span class=\"time\">" + articleList.get(10).getDate() + "</span>\n" +
+                            "</div>";
+                    out.print(first);
+                %>
+
             </div>
             <div class="left">
-                <iframe src="article_list_m.html?type=CPU" scrolling="no" width="417px" height="290px" ></iframe>
-            </div>
-            <div class="articles_cat_right" >
-                <iframe src="article_list_m.html?type=MainBoard" scrolling="no" width="417px" height="290px" ></iframe>
-            </div>
-            <div class=" left">
-                <iframe src="article_list_m.html?type=GPU" scrolling="no" width="417px" height="290px" ></iframe>
+                <iframe src="article_list_m.html?type=CPU" scrolling="no" width="417px" height="290px"></iframe>
             </div>
             <div class="articles_cat_right">
-                <iframe src="article_list_m.html?type=MemoryAndHardDisk" scrolling="no" width="417px" height="290px" ></iframe>
+                <iframe src="article_list_m.html?type=MainBoard" scrolling="no" width="417px" height="290px"></iframe>
             </div>
             <div class=" left">
-                <iframe src="article_list_m.html?type=Other" scrolling="no" width="417px" height="290px" ></iframe>
+                <iframe src="article_list_m.html?type=GPU" scrolling="no" width="417px" height="290px"></iframe>
+            </div>
+            <div class="articles_cat_right">
+                <iframe src="article_list_m.html?type=MemoryAndHard_Disk" scrolling="no" width="417px" height="290px"></iframe>
+            </div>
+            <div class=" left">
+                <iframe src="article_list_m.html?type=Other" scrolling="no" width="417px" height="290px"></iframe>
             </div>
             <div class="articles_cat_right ">
-                <iframe src="article_list_m.html?type=Monitor" scrolling="no" width="417px" height="290px" ></iframe>
+                <iframe src="article_list_m.html?type=Monitor" scrolling="no" width="417px" height="290px"></iframe>
             </div>
         </div>
         <div class="col_sub">
             <iframe src="new_article.html" scrolling="no" width="335px" height="362px"></iframe>
-            <iframe src="hot.html" scrolling="no" width="335px" height="1205px"></iframe>
+            <iframe src="hot.html" scrolling="no" width="335px" height="900px" style="margin-top: 15px"></iframe>
         </div>
     </div>
 </div>
@@ -209,8 +218,8 @@
                             <tbody>
                             <tr>
                                 <td width="58%">
-                                    <a href="#">网站简介</a> | <a
-                                        href="#">联系我们</a> | <a
+                                    <a href="#">网站简介</a> |<a
+                                        href="#">联系我们</a> |<a
                                         href="#">版权声明</a>
                                 </td>
                             </tr>
@@ -219,13 +228,13 @@
                                 </td>
                                 <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a>
                                     <span style="width:300px;margin:0 auto; padding:20px 0;">
-                      <img
-                              src="./pageImg/beian.png" width="20" height="20">
-                                  <a target="_blank" href="#"
-                                     style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-                                    <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
-                                    </a>
-                      </span>
+<img
+        src="./pageImg/beian.png" width="20" height="20">
+<a target="_blank" href="#"
+   style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+<p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
+</a>
+</span>
                                     <br>
                                 </td>
                             </tr>

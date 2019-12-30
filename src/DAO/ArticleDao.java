@@ -67,4 +67,5 @@ public interface ArticleDao {
      */
     List<Article> getHotArticleList();
 
+    List<Article> getRecommemdArticleList();
 }
