@@ -19,7 +19,6 @@ const likedA = document.getElementById("likedA");
 window.onload = function () {
     let id = pageName();
     getArticleById(id);
-
 };
 
 /**

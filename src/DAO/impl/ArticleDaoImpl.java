@@ -63,10 +63,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
         System.out.println(getArticleListByType("CPU", 999));
     }
 
-    @Test
-    public void te1() {
-        System.out.println(getRecommemdArticleList());
-    }
+
 
     /**
      * 获取以xxx为依据排列的前i篇文章信息
@@ -94,7 +91,7 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
             sql = "select * from article  WHERE TYPE= ?";
             return queryForList(sql, type);
         } else {
-             sql = "select id, title,author,date_format(date,'%m-%d')AS date,times,type,imgSrc,liked from article  WHERE TYPE= ?  order by date desc limit ?";
+            sql = "select id, title,author,date_format(date,'%m-%d')AS date,times,type,imgSrc,liked from article  WHERE TYPE= ?  order by date desc limit ?";
             return queryForList(sql, type, i);
         }
 
@@ -135,6 +132,16 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
         String sql = "select id, title,author,content,date,times,type,imgSrc,liked,recommend from article where recommend=1";
 
         return queryForList(sql);
+    }
+
+    @Override
+    public List<Article> searchArticles(String key) {
+        String sql = "select * from article where title like ? ";
+        return queryForList(sql,key);
+    }
+    @Test
+    public void te1() {
+        System.out.println(searchArticles("CPU"));
     }
 
 }

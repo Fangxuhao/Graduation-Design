@@ -80,4 +80,14 @@ public class ArticlesService {
     public List<Article> getRecommemdArticleList() {
         return articleDao.getRecommemdArticleList();
     }
+
+    public List<Article> searchArticles(String key) {
+        key="%"+key+"%";
+        return articleDao.searchArticles(key);
+    }
+
+    @Test
+    public  void  te(){
+        System.out.println(searchArticles("CPU"));
+    }
 }

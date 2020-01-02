@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>用户登录</title>
+    <title>用户注册</title>
     <link type="image/x-icon" href="../Img/ji_s.png" rel="shortcut icon">
     <link type="text/css" href="css/style.css" rel="stylesheet">
     <link type="text/css" href="css/blue.css" rel="stylesheet">
@@ -32,11 +32,11 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo"><a href="#" title="装机大师"><img src="../Img/logo.png" width="350px" height="90px"
+            <div id="logo"  style="width: 30%"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px"
                                                          alt="装机大师"></a></div>
             <div style="float: right;padding-top: 15px">
-                <form action="#" name="search_form" method="get" class="article_search">
-                    <label>
+                <form action="search.html" name="search_form" method="get" class="article_search">
+<label>
                         <input type="text" name="keywords" value="" class="keyword">
                     </label>
                     <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
@@ -75,47 +75,60 @@
         </div>
     </div>
 </div>
-<div id="content"><div class="container">
-    <div class="user_form_box box thin_box full_box">
-        <div class="hd"><h3></h3><div class="extra"></div></div>
-        <div class="bd">
-            <div class="user_form_wrapper clearfix" id="user_form_wrapper">
-                <form method="post" action="http://www.365pcbuy.com/user.php" class="user_form" id="user_reg">
-                    <h1>注册新会员</h1>
-                    <div class="req"><b>*</b> 为必填项</div>
-                    <label for="username_reg"><b><span class="req">*</span>用户名：</b>
-                        <input type="text" name="username" tabindex="2" id="username_reg" original-title="">
-                        <div class="status"></div></label>
+<div id="content">
+    <div class="container">
+        <div class="user_form_box box thin_box full_box">
+            <div class="hd"><h3></h3>
+                <div class="extra"></div>
+            </div>
+            <div class="bd">
+                <div class="user_form_wrapper clearfix" id="user_form_wrapper">
+                    <form method="post" action="" class="user_form" id="user_reg">
+                        <h1>注册新会员</h1>
+                        <div class="req"><b>*</b> 为必填项</div>
+                        <label for="username_reg"><b><span class="req">*</span>用户名：</b>
+                            <input type="text" name="username" tabindex="2" id="username_reg" original-title="">
+                            <div class="status"></div>
+                        </label>
 
-                    <label for="password_reg"><b><span class="req">*</span>密码：</b>
-                        <input type="password" name="password" tabindex="4" id="password_reg" original-title="">
-                        <div class="status"></div></label>
-                    <label for="password_c_reg"><b><span class="req">*</span>确认密码：</b>
-                        <input type="password" name="confirm_password" tabindex="5" id="password_c_reg" original-title="">
-                        <div class="status"></div></label>
-                    <label for="captcha_reg"><b><span class="req">*</span>验证码：</b>
-                        <input type="text" name="captcha" maxlength="4" size="6" tabindex="11" class="captcha" id="captcha_reg">
-                        <span original-title=""><img src="" alt="验证码" class="captcha tip" onclick="" original-title="点击刷新验证码"></span>
-                        <div class="status"></div></label>
-                    <label for="agreement"><b>&nbsp;</b>
-                        <input type="checkbox" name="agreement" tabindex="12" value="1" checked="checked" id="agreement">
-                        <em original-title="">我已看过并接受<a href="http://www.365pcbuy.com/article.php?cat_id=-1" id="agr_link">《用户协议》</a></em>
-                        <div class="status"></div></label>
-                    <div class="submit_wrap">
-                        <input type="submit" name="Submit" value="注册" tabindex="14" class="submit btn_special btn_register">
-                        <input type="hidden" name="act" value="act_register">
-                        <input type="hidden" name="back_act" value="">
+                        <label for="password_reg"><b><span class="req">*</span>密码：</b>
+                                <input type="password" name="password" tabindex="4" id="password_reg" original-title="">
+                            <div class="status"></div>
+                        </label>
+                        <label for="password_c_reg"><b><span class="req">*</span>确认密码：</b>
+                            <input type="password" name="confirm_password" tabindex="5" id="password_c_reg"
+                                   original-title="">
+                            <div class="status"></div>
+                        </label>
+                        <label for="captcha_reg"><b><span class="req">*</span>验证码：</b>
+                            <input type="text" name="captcha" maxlength="4" size="6" tabindex="11" class="captcha"
+                                   id="captcha_reg">
+                            <span original-title=""><img src="./code" alt="验证码" class="captcha tip" onclick=""
+                                                         original-title="点击刷新验证码"></span>
+                            <div class="status"></div>
+                        </label>
+                        <label for="agreement"><b>&nbsp;</b>
+                            <input type="checkbox" name="agreement" tabindex="12" value="1" checked="checked"
+                                   id="agreement">
+                            <em original-title="">我已看过并接受<a href="#" id="agr_link">《用户协议》</a></em>
+                            <div class="status"></div>
+                        </label>
+                        <div class="submit_wrap">
+                            <input type="submit" name="Submit" value="注册" tabindex="14"
+                                   class="submit btn_special btn_register">
+                            <input type="hidden" name="act" value="act_register">
+                            <input type="hidden" name="back_act" value="">
+                        </div>
+                    </form>
+                    <div class="extra">
+                        <h2>立即登录</h2>
+                        <p>如果您已经拥有本站账号，可以直接登录。</p>
+                        <p><a href="login.html" class="button"><span>立即登录</span></a></p>
                     </div>
-                </form>
-                <div class="extra">
-                    <h2>立即登录</h2>
-                    <p>如果您已经拥有本站账号，可以直接登录。</p>
-                    <p><a href="http://www.365pcbuy.com/user.php?act=login" class="button"><span>立即登录</span></a></p>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <div id="footer2">
     <div class="container">
@@ -129,21 +142,21 @@
                     <div class="foot_c">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
-                           <tr>
-                                <td width="58%"><a href="#l">网站简介</a> | <a
+                            <tr>
+                                <td width="58%"><a href="#">网站简介</a> | <a
                                         href="#">联系我们</a> | <a
                                         href="#">版权声明</a></td>
                             </tr>
                             <tr>
                                 <td align="left" class="font_tx">　© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br></td>
                                 <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a><span
-                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./img/beian.png"
+                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./Img/beian.png"
                                                                                                  width="20" height="20"> <a
                                         target="_blank"
                                         href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032"
                                         style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
                       <p
-                              style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
+                              style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
                       </a> </span> <br></td>
                             </tr>
                             </tbody>

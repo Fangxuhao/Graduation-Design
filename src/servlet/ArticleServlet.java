@@ -40,13 +40,23 @@ public class ArticleServlet extends HttpServlet {
             data = getHotArticles();
         } else if (program.equals("recommendArticle")) {//获取推荐文章
             data = getRecommemdArticles();
-        } else if (program.equals("AL")) {//获取推荐文章
+        } else if (program.equals("AL")) {//获取分类文章
             String type = request.getParameter("type");
-            data = getArticlesListByType(type);//获取分类文章
+            data = getArticlesListByType(type);
+        }else if (program.equals("Search")) {//搜索文章
+            String key = request.getParameter("key");
+            data = searchArticles(key);
+            System.out.println("搜索文章"+"key="+key);
         }
         if (data != null && !data.equals("")) {
+            System.out.println("data="+data);
             response.getWriter().print(data);
         }
+    }
+
+    private String searchArticles(String key) {
+        List<Article> articleList = articlesService.searchArticles(key);
+        return JSONArray.fromObject(articleList).toString();
     }
 
     private String getArticlesListByType(String type) {

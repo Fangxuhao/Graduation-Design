@@ -37,7 +37,7 @@ window.onload = function () {
             }
         }
     };
-    xmlhttp.open("POST", "/getArticleReview", true);
+    xmlhttp.open("POST", "/user", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("id="+id);
 };

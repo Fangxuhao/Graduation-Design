@@ -68,4 +68,11 @@ public interface ArticleDao {
     List<Article> getHotArticleList();
 
     List<Article> getRecommemdArticleList();
+
+    /**
+     * 搜索
+     * @return
+     */
+    List<Article> searchArticles(String key);
+
 }

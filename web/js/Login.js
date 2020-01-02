@@ -31,9 +31,9 @@ function loginUp() {
 
     $.ajax({
         type: 'post',
-        url: "/login",
+        url: "/user",
         dataType: "text",
-        data: {"pwd": password, "email": email, "code": code,"remember":remember},
+        data: {"pwd": password, "email": email, "code": code,"remember":remember,"program":"login"},
         success: function (data) {
             if (data == -1) {
                 $.jGrowl("账号密码错误，请重新输入", {header: '提醒'});

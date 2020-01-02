@@ -62,7 +62,6 @@ function manyValues() {
         for (let i = 0; i < strs.length; i++) {
             key[i] = strs[i].split("=")[0];
             value[i] = unescape(strs[i].split("=")[1]);
-            // alert(key[i]+"="+value[i]);
         }
         return value[0];
     }

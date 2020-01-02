@@ -26,14 +26,14 @@
     <div class="container">
         <div class="user_area" id="user_area">
             <em>欢迎您来到装机大师！</em>
-            <a href="#" class="register">免费注册</a>
-            <a href="#" class="login quick_login">登录</a>
+            <a href="register.html" class="register">免费注册</a>
+            <a href="login.html" class="login quick_login">登录</a>
         </div>
         <div class="small_nav top_nav_wrapper">
             <div class="nav">
                 <ul class="level_1">
                     <li class="level_1 first">
-                        <a href="#" class="level_1">
+                        <a href="Personal.html" class="level_1">
                             <strong>
                                 <span>用户中心</span>
                             </strong>
@@ -47,14 +47,14 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px"
-                                                         alt="装机大师"></a></div>
+            <div id="logo" style="width: 30%">
+                <a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px" alt="装机大师"></a></div>
             <div style="float: right;padding-top: 15px">
-                <form action="#" name="search_form" method="get" class="article_search">
+                <form action="search.html" name="search_form" method="get" class="article_search">
                     <label>
                         <input type="text" name="keywords" value="" class="keyword">
                     </label>
-                    <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
+                    <input type="submit" value="文章搜索"  class="submit btn_s3" style="margin-top:3px">
                 </form>
                 <div class="articles_notice notice_box"><a href="#">重要通知：本站即将关闭！</a></div>
             </div>
@@ -85,7 +85,7 @@
         </div>
     </div>
 </div>
-<div id="content">
+<div id="content" style="padding-bottom: 0">
     <div class="container">
         <div class="col_main">
             <div class="articles_featured clearfix">
@@ -187,7 +187,8 @@
                 <iframe src="article_list_m.html?type=GPU" scrolling="no" width="417px" height="290px"></iframe>
             </div>
             <div class="articles_cat_right">
-                <iframe src="article_list_m.html?type=MemoryAndHard_Disk" scrolling="no" width="417px" height="290px"></iframe>
+                <iframe src="article_list_m.html?type=MemoryAndHard_Disk" scrolling="no" width="417px"
+                        height="290px"></iframe>
             </div>
             <div class=" left">
                 <iframe src="article_list_m.html?type=Other" scrolling="no" width="417px" height="290px"></iframe>
@@ -246,6 +247,7 @@
         </div>
     </div>
 </div>
+<script src="js/jquery.min.js"></script>
 <script src="./js/base.js"></script>
 </body>
 </html>

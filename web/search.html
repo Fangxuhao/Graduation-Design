@@ -1,12 +1,19 @@
+<!--CPU页面-->
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" class="wide" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>搜索</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CPU_硬件知识_装机大湿-电脑配置专业研究网站！</title>
+    <link type="image/x-icon" href="Img/ji_s.png" rel="shortcut icon">
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link type="text/css" href="css/blue.css" rel="stylesheet">
+    <script type="text/javascript">if (screen.width >= 1220) {
+        document.getElementsByTagName('html')[0].className = 'wide';
+    }</script>
+    <link type="text/css" href="./css/articles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
-
-
-<body id="" class="">
+<body id="page_article_cat">
 <div id="top">
     <div class="container">
         <div class="user_area" id="user_area"><em>欢迎您来到装机大师！</em>
@@ -25,15 +32,13 @@
 <div id="header">
     <div class="container">
         <div>
-            <div id="logo">
-                <a href="./index.jsp" title="装机大师"><img src="../Img/logo.png" width="350px" height="90px" alt="装机大师"></a>
-            </div>
-            <div style="float: right;padding-top: 15px">
-                <form action="#" name="search_form" method="get" class="article_search">
-                    <label>
+<div id="logo"  style="width: 30%"><a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px"
+                                                         alt="装机大师"></a></div><div style="float: right;padding-top: 15px">
+                <form action="search.html" name="search_form" method="get" class="article_search">
+<label>
                         <input type="text" name="keywords" value="" class="keyword">
-                    </label>
-                    <input type="submit" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
+                        </label>
+                    <input type="submit" onclick="search(keywords.value())" value="文章搜索" class="submit btn_s3" style="margin-top:3px">
                 </form>
                 <div class="articles_notice notice_box"><a href="#">重要通知：本站即将关闭！</a></div>
             </div>
@@ -44,30 +49,83 @@
             <div class="nav_wrapper">
                 <div class="nav">
                     <ul class="level_1" style="margin-top: 8px">
-                        <li class="level_1 first"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
-                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">CPU</span></strong></a></li>
-                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">GPU</span></strong></a></li>
-                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">主板</span></strong></a></li>
-                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">内存硬盘</span></strong></a></li>
-                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">显示器</span></strong></a></li>
-                        <li class="level_1"><a href="#" class="level_1"><strong><span style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a></li>
+                        <li class="level_1 first"><a href="index.jsp" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">首页</span></strong></a></li>
+                        <li class="level_1"><a href="CPU.html" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">CPU</span></strong></a></li>
+                        <li class="level_1"><a href="GPU.html" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">GPU</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="mainboard.html" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">主板</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="MemoryAndHard_Disk.html" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">内存硬盘</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="Monitor.html" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">显示器</span></strong></a>
+                        </li>
+                        <li class="level_1"><a href="Other.html" class="level_1"><strong><span
+                                style="font-size: 18px;line-height: 30px">机箱电源其它</span></strong></a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="content">
-    <div class="container"></div>
+<div id="content" style="padding-bottom: 0">
+    <div class="container">
+        <p class="breadcrumbs"><a href="index.jsp">文章首页</a> <code>&gt;</code> <a href="#">搜索</a><code>&gt;</code> <a id="keydata" href="#">搜索</a></p>
+        <div class="col_main">
+            <div class="articles_cat_wappper">
+                <div class="col_a">
+                    <div class="articles_list clearfix" id="all">
+<!--                        <iframe  src="article_list.html?type=CPU" width="100%" id="mainiframe" scrolling="no"></iframe>-->
+                    </div>
+                </div>
+                <div class="col_b">
+                    <iframe src="hot.html" height="1010px"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="col_sub">
+            <div class="box fancy_box article_category">
+                <div class="hd"><h3>文章分类</h3>
+                    <div class="extra"></div>
+                </div>
+                <div class="bd">
+                    <ul class="level_1">
+                        <li class="level_1">
+                            <a href="CPU.html" class="level_1"><span>CPU</span></a>
+                        </li>
+                        <li class="level_1">
+                            <a href="mainboard.html" class="level_1"><span>主板</span></a>
+                        </li>
+                        <li class="level_1">
+                            <a href="GPU.html" class="level_1"><span>显卡</span></a>
+                        </li>
+                        <li class="level_1">
+                            <a href="MemoryAndHard_Disk.html" class="level_1"><span>内存内存硬盘</span></a>
+                        </li>
+                        <li class="level_1">
+                            <a href="Other.html" class="level_1"><span>机箱电源其它</span></a>
+                        </li>
+                        <li class="level_1">
+                            <a href="Monitor.html" class="level_1"><span>显示器</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="footer2">
     <div class="container">
         <div class="box thin_box full_box">
             <div class="hd">
-                <h3>
-                </h3>
-                <div class="extra">
-                </div>
+                <h3></h3>
+                <div class="extra"></div>
             </div>
             <div class="bd">
                 <div class="foot">
@@ -75,23 +133,19 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                             <tr>
-                                <td width="58%">
-                                    <a href="#">网站简介</a> |
-                                    <a href="#">联系我们</a> |
-                                    <a href="#">版权声明</a>
-                                </td>
+                                <td width="58%"><a href="#">网站简介</a> | <a
+                                        href="#">联系我们</a> | <a
+                                        href="#">版权声明</a></td>
                             </tr>
                             <tr>
                                 <td align="left" class="font_tx">　© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br></td>
-                                <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a>
-                                    <span style="width:300px;margin:0 auto; padding:20px 0;">
-                                        <img src="./img/beian.png" width="20" height="20">
-                                        <a target="_blank" href="#" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-                                            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
-                                        </a>
-                                    </span>
-                                    <br>
-                                </td>
+                                <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a><span
+                                        style="width:300px;margin:0 auto; padding:20px 0;"> <img src="./pageImg/beian.png" width="20" height="20"> <a
+                                        target="_blank"
+                                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702000032"
+                                        style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                      <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">X公网安备 xxxxxxxxxxxxxxxx号</p>
+                      </a> </span> <br></td>
                             </tr>
                             </tbody>
                         </table>
@@ -101,6 +155,25 @@
         </div>
     </div>
 </div>
-</body>
+<script src="js/jquery.min.js"></script>
+<script src="./js/base.js"></script>
+<script src="js/search.js"></script>
+<script>
 
+    window.onresize = function () {
+        reinitIframe();
+    };
+    function reinitIframe(){
+        var iframe = document.getElementById("mainiframe");
+        try{
+            var bHeight = iframe.contentWindow.document.body.scrollHeight;
+            var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+            var height = Math.min(bHeight, dHeight);
+            iframe.height = height;
+        }catch (ex){}
+    }
+    // 定时触发
+    window.setInterval("reinitIframe()", 200);
+</script>
+</body>
 </html>

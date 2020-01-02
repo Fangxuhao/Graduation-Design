@@ -56,13 +56,11 @@
         </div>
     </div>
 </div>
+<script src="js/jquery.min.js"></script>
 <script src="js/review.js"></script>
 <script type="text/javascript">
-    function changeImg() {//判断是登录也还是注册页
+    function changeImg() {
         var imgSrc = $("#code_img");
-        // alert( img.src="/codeServlet?time="+new Date().getTime());
-        // img.src="/codeServlet?time="+new Date().getTime();
-        // document.getElementById("imgObj")[0].setsrc="/codeServlet?time="+new Date().getTime();
         var src = imgSrc.attr("src");
         imgSrc.attr("src", chgUrl(src));
     }
