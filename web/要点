@@ -2,3 +2,15 @@
 MemoryAndHard_Disk
 MainBoard
 Other
+
+
+
+
+
+
+ $("input").blur(function(){
+    alert("输入框失去了焦点");
+  });
+   $("input").focus(function(){
+    alert("输入框得到了焦点");
+  });
