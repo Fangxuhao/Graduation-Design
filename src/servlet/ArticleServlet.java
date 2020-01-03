@@ -21,32 +21,47 @@ public class ArticleServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         String program = request.getParameter("program");
         String data = null;
-        if (program.equals("IAL_5")) {//获取首页文章小列表
-            String type = request.getParameter("type");
-            data = getIndexArticlesListMin(type);
-        } else if (program.equals("getDataById")) {//获取指定id文章的信息
-            String id = request.getParameter("id");
-            data = getArticleDataById(id);
-        } else if (program.equals("addTimes")) {//更新文章浏览量
-            String id = request.getParameter("id");
-            updateArticleViews(id);
-        } else if (program.equals("liked")) {//点赞加一
-            String id = request.getParameter("id");
-            System.out.println("liked");
-            updateArticleLikeds(id);
-        } else if (program.equals("newArticle")) {//获取10篇最新文章
-            data = getNewArticles();
-        } else if (program.equals("hotArticle")) {//获取热门文章
-            data = getHotArticles();
-        } else if (program.equals("recommendArticle")) {//获取推荐文章
-            data = getRecommemdArticles();
-        } else if (program.equals("AL")) {//获取分类文章
-            String type = request.getParameter("type");
-            data = getArticlesListByType(type);
-        }else if (program.equals("Search")) {//搜索文章
-            String key = request.getParameter("key");
-            data = searchArticles(key);
-            System.out.println("搜索文章"+"key="+key);
+        switch (program) {
+            case "IAL_5": {//获取首页文章小列表
+                String type = request.getParameter("type");
+                data = getIndexArticlesListMin(type);
+                break;
+            }
+            case "getDataById": {//获取指定id文章的信息
+                String id = request.getParameter("id");
+                data = getArticleDataById(id);
+                break;
+            }
+            case "addTimes": {//更新文章浏览量
+                String id = request.getParameter("id");
+                updateArticleViews(id);
+                break;
+            }
+            case "liked": {//点赞加一
+                String id = request.getParameter("id");
+                System.out.println("liked");
+                updateArticleLikeds(id);
+                break;
+            }
+            case "newArticle": //获取10篇最新文章
+                data = getNewArticles();
+                break;
+            case "hotArticle": //获取热门文章
+                data = getHotArticles();
+                break;
+            case "recommendArticle": //获取推荐文章
+                data = getRecommemdArticles();
+                break;
+            case "AL": {//获取分类文章
+                String type = request.getParameter("type");
+                data = getArticlesListByType(type);
+                break;
+            }
+            case "Search": //搜索文章
+                String key = request.getParameter("key");
+                data = searchArticles(key);
+                System.out.println("搜索文章" + "key=" + key);
+                break;
         }
         if (data != null && !data.equals("")) {
             System.out.println("data="+data);

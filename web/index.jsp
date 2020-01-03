@@ -25,22 +25,9 @@
 <div id="top">
     <div class="container">
         <div class="user_area" id="user_area">
-            <em>欢迎您来到装机大师！</em>
-            <a href="register.html" class="register">免费注册</a>
-            <a href="login.html" class="login quick_login">登录</a>
-        </div>
-        <div class="small_nav top_nav_wrapper">
-            <div class="nav">
-                <ul class="level_1">
-                    <li class="level_1 first">
-                        <a href="Personal.html" class="level_1">
-                            <strong>
-                                <span>用户中心</span>
-                            </strong>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<%--            <em>欢迎您来到装机大师！</em>--%>
+<%--            <a href="register.html" class="register">免费注册</a>--%>
+<%--            <a href="login.html" class="login quick_login">登录</a>--%>
         </div>
     </div>
 </div>
@@ -247,7 +234,13 @@
         </div>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="./js/base.js"></script>
+<script type="text/javascript">
+    window.onload=function () {
+        pageTop();
+    }
+</script>
 </body>
 </html>

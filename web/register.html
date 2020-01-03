@@ -15,17 +15,6 @@
 </head>
 <body id="page_user">
 <div id="top">
-    <div class="container">
-        <div class="user_area" id="user_area">
-        </div>
-        <div class="small_nav top_nav_wrapper">
-            <div class="nav">
-                <ul class="level_1">
-                    <li class="level_1 first"><a href="#" class="level_1"><strong><span>用户中心</span></strong></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 <div id="header">
     <div class="container">
@@ -85,40 +74,37 @@
                     <form method="post" action="#" class="user_form" id="user_reg">
                         <h1>注册新会员</h1>
                         <div class="req"><b>*</b> 为必填项</div>
-                        <label for="username_reg"><b><span class="req">*</span>用户名：</b>
-                            <input type="text" name="username" tabindex="2" id="username_reg" data-content="用户名不能为空">
-                            <div class="status"></div>
+                        <label><b><span class="req">*</span>用户名：</b>
+                            <input type="text" name="username" tabindex="2" id="username_reg" data-trigger="manual"
+                                    data-content="用户名不能为空">
                         </label>
                         <label for="useremail_reg"><b><span class="req">*</span>邮箱：</b>
-                            <input type="text" name="useremail" tabindex="3" id="useremail_reg" data-content="邮箱不能为空">
-                            <div class="status"></div>
+                            <input type="text" name="useremail" tabindex="3" id="useremail_reg" data-trigger="manual" data-content="邮箱不能为空">
                         </label>
                         <label for="password_reg"><b><span class="req">*</span>密码：</b>
-                            <input type="password" name="password" tabindex="4" id="password_reg" data-content="密码不能为空">
-                            <div class="status"></div>
+                            <input type="password" name="password" tabindex="4" id="password_reg" data-trigger="manual" data-content="密码不能为空">
                         </label>
                         <label for="password_c_reg"><b><span class="req">*</span>确认密码：</b>
-                            <input type="password" name="confirm_password" tabindex="5" id="password_c_reg" data-content="两次密码输入不一致">
-                            <div class="status"></div>
+                            <input type="password" name="confirm_password" tabindex="5" id="password_c_reg"
+                                   data-trigger="manual" data-content="两次密码输入不一致">
                         </label>
                         <label for="captcha_reg"><b><span class="req">*</span>验证码：</b>
                             <input type="text" name="captcha" maxlength="4" size="6" tabindex="11" class="captcha"
-                                   id="captcha_reg"  data-content="验证码不能为空">
-                            <span id="bo"  data-content="点击刷新验证码" >
-                                <img src="./code" alt="验证码"   id="code_img"  class="captcha tip" onclick="changeImg()" >
+                                   id="captcha_reg" data-trigger="manual" data-content="验证码不能为空">
+                            <span id="bo" data-trigger="manual" data-content="点击刷新验证码">
+                                <img src="./code" alt="验证码" id="code_img" class="captcha tip" onclick="changeImg()">
                             </span>
-                            <div class="status"></div>
                         </label>
                         <label for="agreement">
                             <b>&nbsp;</b>
                             <input type="checkbox" name="agreement" tabindex="12" value="1" checked="checked"
                                    id="agreement">
                             <em original-title="">我已看过并接受<a href="#">《用户协议》</a></em>
-                            <div class="status"></div>
                         </label>
                         <div class="submit_wrap">
                             <button
-                                    type="button" name="Submit" onclick="register()" value="注册" tabindex="14" class="submit btn_special btn_register">
+                                    type="button" name="Submit" onclick="register()" value="注册" tabindex="14"
+                                    class="submit btn_special btn_register">
                             </button>
                         </div>
                     </form>
@@ -179,6 +165,7 @@
 <script src="./js/bootstrap-tooltip.js"></script>
 <script src="./js/bootstrap-popover.js"></script>
 <script src="./js/Register.js"></script>
+<script src="js/base.js"></script>
 <script type="text/javascript">
     function changeImg() {
         var imgSrc = $("#code_img");

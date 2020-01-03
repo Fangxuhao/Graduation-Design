@@ -3,6 +3,7 @@ function changeImg() {
     var src = imgSrc.attr("src");
     imgSrc.attr("src", chgUrl(src));
 }
+
 function chgUrl(url) {
     var timestamp = (new Date()).valueOf();
     url = url.substring(0, 20);
@@ -15,13 +16,15 @@ function chgUrl(url) {
 }
 
 
-
 function pageTop() {
     const nameCookie = getCookie("name");
+
     if (nameCookie !== "") {
-        user_area.innerHTML = "<em>您好&nbsp;fxh</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
-            "<a href=\"#\" class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
-    }else {
+        user_area.innerHTML = "<em>您好&nbsp;" +
+            getCookie("name") +
+            "</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
+            "<a href=\"#\" type=\"button\"  class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
+    } else {
         user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
             "<a href=\"register.html\" class=\"register\">免费注册</a>\n" +
             "<a href=\"login.html\" class=\"login quick_login\">登录</a>"
@@ -48,24 +51,13 @@ function getCookie(cname) {
  * 删除所有cookei
  */
 function deleteCookie() {
-    var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        var eqPos = cookie.indexOf("=");
-        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-    }
-    if (cookies.length > 0) {
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i];
-            var eqPos = cookie.indexOf("=");
-            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-            var domain = location.host.substr(location.host.indexOf('.'));
-            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=" + domain;
-        }
-    }
+    $.removeCookie('name');
+    $.removeCookie('email');
     window.location.href = "index.jsp"
 }
+
+
+
 /**
  * 接收上一个页面传递的信息
  */
@@ -83,17 +75,17 @@ function manyValues() {
             value[i] = unescape(strs[i].split("=")[1]);
             // alert(key[i]+"="+value[i]);
         }
-            return value[0];
+        return value[0];
     }
     return null;
 }
 
 
 function search() {
-    var data=document.getElementsByName("keywords").values();
-    alert(data);
-    if (data!==null&&data!==""){
-        window.location.href="./search.html?key=" + data;
+    var data = document.getElementsByName("keywords").values();
+    // alert(data);
+    if (data !== null && data !== "") {
+        window.location.href = "./search.html?key=" + data;
         // $(location).attr('href',href);
     }
 }

@@ -32,5 +32,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="rt" level="project" />
+    <orderEntry type="library" name="jquery.cookie" level="application" />
   </component>
 </module>
