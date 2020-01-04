@@ -25,6 +25,12 @@ public class AdminDAOImpl extends BaseDAO<Admin> implements AdminDao {
         return query(sql, email, pwd);
     }
 
+    @Override
+    public Admin getUserDataByEmail(String email) {
+        String sql = "select * from user where email = ?";
+        return query(sql, email);
+    }
+
     /**
      * @param email 邮箱
      * @return 邮箱被占用时返回false，邮箱可用是返回true
@@ -34,9 +40,10 @@ public class AdminDAOImpl extends BaseDAO<Admin> implements AdminDao {
         String sql = "select * from user where email = ?";
         return query(sql, email) == null;
     }
+
     @Override
     public void updataUserData(String birthday, String sex, String email) {
         String sql = "UPDATE user SET birthday=? ,sex=?  where email =?";
-        query(sql, birthday, sex, email);
+        update(sql, birthday, sex, email);
     }
 }

@@ -235,7 +235,7 @@
     </div>
 </div>
 <script src="./js/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="./js/jquery.cookie.min.js"></script>
 <script src="./js/base.js"  charset="UTF-8"></script>
 <script type="text/javascript">
     window.onload=function () {

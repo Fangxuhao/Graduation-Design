@@ -16,6 +16,13 @@ public interface AdminDao {
     Admin LoginByEmailAndPwd(String email, String pwd);
 
     /**
+     * 通过邮箱获取用户信息
+     * @param email
+     * @return
+     */
+    Admin getUserDataByEmail(String email);
+
+    /**
      * 判断邮箱是否已经备注
      *
      * @param email 邮箱

@@ -53,6 +53,7 @@ function getCookie(cname) {
 function deleteCookie() {
     $.removeCookie('name');
     $.removeCookie('email');
+    $.removeCookie('birthday');
     window.location.href = "index.jsp"
 }
 

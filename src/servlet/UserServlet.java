@@ -50,11 +50,15 @@ public class UserServlet extends HttpServlet {
                     //删除现有用户cookie
                     deleteC(request, response);
                     Cookie CName = new Cookie("name", admin.getName());
-                    Cookie CBirthday = new Cookie("name", admin.getBirthday());
+                    System.out.println(admin.getBirthday());
+                    Cookie CBirthday = new Cookie("birthday", admin.getBirthday());
+                    Cookie CSex = new Cookie("sex", admin.getSex());
                     Cookie CEmail = new Cookie("email", email);
 
                     CEmail.setMaxAge(60 * 60 * 24);
                     response.addCookie(CEmail);
+                    CSex.setMaxAge(60 * 60 * 24);
+                    response.addCookie(CSex);
                     CBirthday.setMaxAge(60 * 60 * 24);
                     response.addCookie(CBirthday);
                     CName.setMaxAge(60 * 60 * 24);
@@ -104,12 +108,15 @@ public class UserServlet extends HttpServlet {
                     Cookie CName = new Cookie("name", username);
                     Cookie CEmail = new Cookie("email", email);
                     Cookie CBirhtday = new Cookie("birthday", "1970-01-01");
+                    Cookie CSex = new Cookie("sex", "保密");
                     CEmail.setMaxAge(60 * 60 * 24);
                     CName.setMaxAge(60 * 60 * 24);
                     CBirhtday.setMaxAge(60 * 60 * 24);
+                    CSex.setMaxAge(60 * 60 * 24);
                     response.addCookie(CEmail);
                     response.addCookie(CBirhtday);
                     response.addCookie(CName);
+                    response.addCookie(CSex);
                 }
             }
         } else {
@@ -154,18 +161,24 @@ public class UserServlet extends HttpServlet {
     }
 
     private void userDataChange(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String path = getServletContext().getRealPath("/Img");
-        MultipartRequest multiReq = new MultipartRequest(request, path, "UTF-8");
-        String birthday = multiReq.getParameter("birthday");
-        String sex = multiReq.getParameter("sex");
-        String email = multiReq.getParameter("email");
+        String birthday = request.getParameter("birthday");
+        String sex = request.getParameter("sex");
+        String email = request.getParameter("email");
 
-        System.out.println(birthday+"         "+sex+"    "+email);
-        updataUserData(birthday,sex,email);
+        System.out.println(birthday + "         " + sex + "    " + email);
 
+
+        adminService.updataUserData(birthday, sex, email);
+        Admin admin = adminService.getUserDataByEmail(email);
+
+        Cookie CBirthday = new Cookie("birthday", admin.getBirthday());
+        Cookie CSex = new Cookie("sex", admin.getSex());
+
+        CSex.setMaxAge(60 * 60 * 24);
+        response.addCookie(CSex);
+        CBirthday.setMaxAge(60 * 60 * 24);
+        response.addCookie(CBirthday);
+        response.getWriter().print(1);
     }
 
-    private void updataUserData(String birthday, String sex,String email) {
-        adminService.updataUserData(birthday,sex,email);
-    }
 }

@@ -1,9 +1,7 @@
 package service;
 
 import DAO.AdminDao;
-import DAO.ArticleDao;
 import DAO.impl.AdminDAOImpl;
-import DAO.impl.ArticleDaoImpl;
 import domain.Admin;
 
 /**
@@ -35,5 +33,10 @@ public class AdminService {
 
     public void updataUserData(String birthday, String sex, String email) {
             adminDao.updataUserData(birthday,sex,email);
+    }
+
+    public Admin getUserDataByEmail(String email) {
+
+        return adminDao.getUserDataByEmail(email);
     }
 }
