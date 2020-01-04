@@ -1,5 +1,6 @@
 package servlet;
 
+import com.oreilly.servlet.MultipartRequest;
 import domain.Admin;
 import service.AdminService;
 import tool.MD5;
@@ -16,7 +17,8 @@ import java.io.PrintWriter;
 @WebServlet(name = "UserServlet")
 public class UserServlet extends HttpServlet {
 
-    private AdminService adminService=new AdminService();
+    private AdminService adminService = new AdminService();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -43,18 +45,18 @@ public class UserServlet extends HttpServlet {
             } else {//验证码正确
                 //账号密码判断
 
-                    admin = adminService.LoginByEmailAndPwd(email, pwd);
-
+                admin = adminService.LoginByEmailAndPwd(email, pwd);
                 if (admin != null) {//密码正确
                     //删除现有用户cookie
                     deleteC(request, response);
                     Cookie CName = new Cookie("name", admin.getName());
+                    Cookie CBirthday = new Cookie("name", admin.getBirthday());
                     Cookie CEmail = new Cookie("email", email);
-//                    if (remember.equals("true")){
-//                        Cookie CPwd= new Cookie("pwd", pwd);
-//                    }
+
                     CEmail.setMaxAge(60 * 60 * 24);
                     response.addCookie(CEmail);
+                    CBirthday.setMaxAge(60 * 60 * 24);
+                    response.addCookie(CBirthday);
                     CName.setMaxAge(60 * 60 * 24);
                     response.addCookie(CName);
                     response.getWriter().print(1);
@@ -98,15 +100,16 @@ public class UserServlet extends HttpServlet {
                     out.print(1);
                     System.out.println("注册成功");
                     //删除现有用户cookie
-                    deleteC(request,response);
-                    Cookie CName=new Cookie("name",username);
-                    Cookie CEmail=new Cookie("email",email);
-                    CEmail.setMaxAge(60*60*24);
-                    CName.setMaxAge(60*60*24);
-                    response.addCookie( CEmail );
-                    response.addCookie( CName );
-//                    response.sendRedirect("index.jsp");
-
+                    deleteC(request, response);
+                    Cookie CName = new Cookie("name", username);
+                    Cookie CEmail = new Cookie("email", email);
+                    Cookie CBirhtday = new Cookie("birthday", "1970-01-01");
+                    CEmail.setMaxAge(60 * 60 * 24);
+                    CName.setMaxAge(60 * 60 * 24);
+                    CBirhtday.setMaxAge(60 * 60 * 24);
+                    response.addCookie(CEmail);
+                    response.addCookie(CBirhtday);
+                    response.addCookie(CName);
                 }
             }
         } else {
@@ -141,8 +144,28 @@ public class UserServlet extends HttpServlet {
         String program = request.getParameter("program");
         if (program.equals("register")) {
             register(request, response);
-        }else if (program.equals("login")){
+        } else if (program.equals("login")) {
             login(request, response);
+        } else if (program.equals("userdata")) {
+            userDataChange(request, response);
         }
+
+
+    }
+
+    private void userDataChange(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String path = getServletContext().getRealPath("/Img");
+        MultipartRequest multiReq = new MultipartRequest(request, path, "UTF-8");
+        String birthday = multiReq.getParameter("birthday");
+        String sex = multiReq.getParameter("sex");
+        String email = multiReq.getParameter("email");
+
+        System.out.println(birthday+"         "+sex+"    "+email);
+        updataUserData(birthday,sex,email);
+
+    }
+
+    private void updataUserData(String birthday, String sex,String email) {
+        adminService.updataUserData(birthday,sex,email);
     }
 }

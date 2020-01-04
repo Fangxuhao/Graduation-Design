@@ -17,17 +17,23 @@ public class AdminService {
 
     /**
      * 判断邮箱是否已经备注
+     *
      * @param email
      * @return
      */
-   public boolean IsAvailableByEmail(String email){
-       return adminDao.IsAvailableByEmail(email);
+    public boolean IsAvailableByEmail(String email) {
+        return adminDao.IsAvailableByEmail(email);
     }
 
     public void Register(String username, String pwd, String email) {
-        adminDao.Register(username,pwd,email);
+        adminDao.Register(username, pwd, email);
     }
+
     public Admin LoginByEmailAndPwd(String email, String pwd) {
-        return adminDao.LoginByEmailAndPwd(email,pwd);
+        return adminDao.LoginByEmailAndPwd(email, pwd);
+    }
+
+    public void updataUserData(String birthday, String sex, String email) {
+            adminDao.updataUserData(birthday,sex,email);
     }
 }

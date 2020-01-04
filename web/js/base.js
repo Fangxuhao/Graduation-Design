@@ -25,7 +25,7 @@ function pageTop() {
             "</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
             "<a href=\"#\" type=\"button\"  class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
     } else {
-        user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
+        user_area.innerHTML = "<em>欢迎您来到装鸡大湿！</em>\n" +
             "<a href=\"register.html\" class=\"register\">免费注册</a>\n" +
             "<a href=\"login.html\" class=\"login quick_login\">登录</a>"
     }
@@ -82,10 +82,13 @@ function manyValues() {
 
 
 function search() {
-    var data = document.getElementsByName("keywords").values();
+    var data = document.getElementsByName("keywords").values().toString();
     // alert(data);
     if (data !== null && data !== "") {
-        window.location.href = "./search.html?key=" + data;
+
+
+        var condition="./search.html?key=" + data;
+        window.location.href = condition;
         // $(location).attr('href',href);
     }
 }

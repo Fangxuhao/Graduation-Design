@@ -1,8 +1,11 @@
 const all = document.getElementById("all");
 const keydata = document.getElementById("keydata");
+
 $(function () {
     pageTop();
-    keydata.innerHTML = "“" + manyValues() + "”";
+    let da = manyValues();
+    da.toString();
+    keydata.innerHTML = "“" + manyValues()+ "”";
     getDataBySearch(manyValues());
 });
 
@@ -12,7 +15,7 @@ function pageTop() {
         user_area.innerHTML = "<em>您好&nbsp;fxh</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
             "<a href=\"#\" class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
     }else {
-        user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
+        user_area.innerHTML = "<em>欢迎您来到装鸡大湿！</em>\n" +
             "<a href=\"register.html\" class=\"register\">免费注册</a>\n" +
             "<a href=\"login.html\" class=\"login quick_login\">登录</a>"
     }

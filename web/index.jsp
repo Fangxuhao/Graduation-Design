@@ -11,7 +11,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="wide">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>装机大师-电脑配置专业研究网站</title>
+    <title>装鸡大湿-电脑配置专业研究网站</title>
     <link type="image/x-icon" href="./Img/ji_s.png" rel="shortcut icon">
     <link type="text/css" href="./css/style.css" rel="stylesheet">
     <link type="text/css" href="./css/blue.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 <div id="top">
     <div class="container">
         <div class="user_area" id="user_area">
-<%--            <em>欢迎您来到装机大师！</em>--%>
+<%--            <em>欢迎您来到装鸡大湿！</em>--%>
 <%--            <a href="register.html" class="register">免费注册</a>--%>
 <%--            <a href="login.html" class="login quick_login">登录</a>--%>
         </div>
@@ -35,7 +35,7 @@
     <div class="container">
         <div>
             <div id="logo" style="width: 30%">
-                <a href="#" title="装机大师"><img src="./Img/logo.png" width="350px" height="90px" alt="装机大师"></a></div>
+                <a href="#" title="装鸡大湿"><img src="./Img/logo.png" width="350px" height="90px" alt="装鸡大湿"></a></div>
             <div style="float: right;padding-top: 15px">
                 <form action="search.html" name="search_form" method="get" class="article_search">
                     <label>
@@ -212,7 +212,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="left" class="font_tx">　© 2019 装机大师&nbsp;版权所有&nbsp;&nbsp;<br>
+                                <td align="left" class="font_tx">　© 2019 装鸡大湿&nbsp;版权所有&nbsp;&nbsp;<br>
                                 </td>
                                 <td align="right"> ICP备案证书号:<a href="http://www.miitbeian.gov.cn/" target="_blank">XXXXXXXXXXX号</a>
                                     <span style="width:300px;margin:0 auto; padding:20px 0;">
@@ -236,7 +236,7 @@
 </div>
 <script src="./js/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="./js/base.js"></script>
+<script src="./js/base.js"  charset="UTF-8"></script>
 <script type="text/javascript">
     window.onload=function () {
         pageTop();

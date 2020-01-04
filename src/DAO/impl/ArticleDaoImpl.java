@@ -117,13 +117,12 @@ public class ArticleDaoImpl extends BaseDAO<Article> implements ArticleDao {
     public void updateArticleLikeds(String id) {
         String sql = "UPDATE article SET liked=liked+1 where id =?";
         update(sql, id);
-        System.out.println("liked11");
+//        System.out.println("liked11");
     }
 
     @Override
     public List<Article> getHotArticleList() {
         String sql = "select id, title,date,type,imgSrc from article order by liked desc limit 10";
-
         return queryForList(sql);
     }
 

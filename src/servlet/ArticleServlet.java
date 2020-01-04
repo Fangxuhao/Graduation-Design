@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @WebServlet(name = "ArticleServlet")
@@ -59,12 +60,12 @@ public class ArticleServlet extends HttpServlet {
             }
             case "Search": //搜索文章
                 String key = request.getParameter("key");
+                key=  new String(key.getBytes("iso8859-1"), StandardCharsets.UTF_8);
                 data = searchArticles(key);
                 System.out.println("搜索文章" + "key=" + key);
                 break;
         }
         if (data != null && !data.equals("")) {
-            System.out.println("data="+data);
             response.getWriter().print(data);
         }
     }

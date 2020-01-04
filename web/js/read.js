@@ -31,7 +31,7 @@ window.onload = function () {
             "</em><a href=\"Personal.html\" class=\"gotouser\">进入用户中心</a>\n" +
             "<a href=\"#\" class=\"logout\" onclick=\"deleteCookie()\">退出</a>"
     } else {
-        user_area.innerHTML = "<em>欢迎您来到装机大师！</em>\n" +
+        user_area.innerHTML = "<em>欢迎您来到装鸡大湿！</em>\n" +
             "<a href=\"register.html\" class=\"register\">免费注册</a>\n" +
             "<a href=\"login.html\" class=\"login quick_login\">登录</a>"
     }
@@ -59,6 +59,7 @@ function getArticleById(id) {
             if (obj[0].title!==null){
                 title_path.innerHTML = obj[0].title;
                 type_path.innerHTML = obj[0].type;
+                HistoryRecord();
             }
 
         }
@@ -126,3 +127,44 @@ function manyValues() {
 }
 
 
+
+
+var cookieName = "history";  //cookie名称
+var nid;             //文章ID
+var N = 10;            //设置cookie保存的浏览记录的条数
+//记录最近浏览过的商品
+function HistoryRecord() {
+    var historyp;
+    nid = manyValues();
+    if (nid == null || nid === "") {
+        return;
+    }
+    //判断是否存在cookie
+    if ($.cookie(cookieName) == null) //cookie 不存在
+    {
+        //创建新的cookie,保存浏览记录
+        $.cookie(cookieName, nid, { expires: 7, path: '/' });
+    }
+    else //cookies已经存在
+    {
+        //获取浏览过的商品编号ID
+        historyp = $.cookie(cookieName);
+    }
+    //分解字符串为数组
+    var pArray = historyp.split(',');
+    //最新访问的商品编号放置载最前面
+    historyp = nid;
+    //判断是该商品编号是否存在于最近访问的记录里面
+    var count = 0;
+    for (var i = 0; i < pArray.length; i++) {
+        if (pArray[i] !== nid) {
+            historyp = historyp + "," + pArray[i];
+            count++;
+            if (count === N - 1) {
+                break;
+            }
+        }
+    }
+    //修改cookie的值
+    $.cookie(cookieName, historyp);
+}
