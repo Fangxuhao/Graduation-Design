@@ -37,4 +37,6 @@ public interface AdminDao {
      */
     void updataUserData(String birthday, String sex,String email);
 
+    void changeUserPWD(String email,String pwd);
+
 }

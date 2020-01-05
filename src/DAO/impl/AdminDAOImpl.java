@@ -46,4 +46,12 @@ public class AdminDAOImpl extends BaseDAO<Admin> implements AdminDao {
         String sql = "UPDATE user SET birthday=? ,sex=?  where email =?";
         update(sql, birthday, sex, email);
     }
+
+    @Override
+    public void changeUserPWD(String email, String pwd) {
+        String sql = "UPDATE user pwd=?  where email =?";
+        update(sql, pwd, email);
+
+    }
+
 }

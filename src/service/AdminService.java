@@ -36,7 +36,10 @@ public class AdminService {
     }
 
     public Admin getUserDataByEmail(String email) {
-
         return adminDao.getUserDataByEmail(email);
+    }
+
+    public void changeUserPWD(String pwd, String email) {
+        adminDao.changeUserPWD(email,pwd);
     }
 }

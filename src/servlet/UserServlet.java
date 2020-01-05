@@ -155,7 +155,28 @@ public class UserServlet extends HttpServlet {
             login(request, response);
         } else if (program.equals("userdata")) {
             userDataChange(request, response);
+        } else if (program.equals("userpwd")) {
+            userPWDChange(request, response);
         }
+
+
+    }
+
+    private void userPWDChange(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String email = request.getParameter("email");
+        String pwd = new MD5().md5(request.getParameter("pwd"));
+        String oldPwd = new MD5().md5(request.getParameter("oldpwd"));
+        System.out.println(pwd + "         "  + "    " + email);
+
+       Admin admin = adminService.LoginByEmailAndPwd(email, oldPwd);
+        if (admin != null) {//密码正确
+            adminService.changeUserPWD(pwd,email);
+            PrintWriter out = response.getWriter();
+            out.print(1);
+             }else {
+            response.getWriter().print(-1);
+        }
+
 
 
     }
@@ -170,7 +191,7 @@ public class UserServlet extends HttpServlet {
 
         adminService.updataUserData(birthday, sex, email);
         Admin admin = adminService.getUserDataByEmail(email);
-
+        System.out.println(admin.getBirthday());
         Cookie CBirthday = new Cookie("birthday", admin.getBirthday());
         Cookie CSex = new Cookie("sex", admin.getSex());
 
