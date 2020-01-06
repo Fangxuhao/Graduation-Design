@@ -16,7 +16,6 @@ function BindHistory() {
         var pArray = historyp.split(',');
         for (var i = 0; i < pArray.length; i++) {
             if (pArray[i] !== "") {
-                //alert(pArray[i]);
 
                 prdIDs.push(pArray[i]);
             }
