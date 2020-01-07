@@ -46,7 +46,8 @@ public class UserServlet extends HttpServlet {
                 //账号密码判断
 
                 admin = adminService.LoginByEmailAndPwd(email, pwd);
-                if (admin != null) {//密码正确
+                if (admin != null)//密码正确
+                {
                     //删除现有用户cookie
                     deleteC(request, response);
                     Cookie CName = new Cookie("name", admin.getName());
@@ -64,7 +65,8 @@ public class UserServlet extends HttpServlet {
                     CName.setMaxAge(60 * 60 * 24);
                     response.addCookie(CName);
                     response.getWriter().print(1);
-                } else {
+                }
+                else {
                     response.getWriter().print(-1);
                 }
             }
@@ -149,14 +151,19 @@ public class UserServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
         String program = request.getParameter("program");
-        if (program.equals("register")) {
-            register(request, response);
-        } else if (program.equals("login")) {
-            login(request, response);
-        } else if (program.equals("userdata")) {
-            userDataChange(request, response);
-        } else if (program.equals("userpwd")) {
-            userPWDChange(request, response);
+        switch (program) {
+            case "register":
+                register(request, response);
+                break;
+            case "login":
+                login(request, response);
+                break;
+            case "userdata":
+                userDataChange(request, response);
+                break;
+            case "userpwd":
+                userPWDChange(request, response);
+                break;
         }
 
 
@@ -190,6 +197,8 @@ public class UserServlet extends HttpServlet {
 
 
         adminService.updataUserData(birthday, sex, email);
+
+
         Admin admin = adminService.getUserDataByEmail(email);
         System.out.println(admin.getBirthday());
         Cookie CBirthday = new Cookie("birthday", admin.getBirthday());

@@ -59,9 +59,11 @@ public class ArticleServlet extends HttpServlet {
                 break;
             }
             case "Search": //搜索文章
+
                 String key = request.getParameter("key");
                 key=  new String(key.getBytes("iso8859-1"), StandardCharsets.UTF_8);
                 data = searchArticles(key);
+
                 System.out.println("搜索文章" + "key=" + key);
                 break;
         }
